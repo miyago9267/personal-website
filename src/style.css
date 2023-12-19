@@ -28,6 +28,9 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+    /* Define the background with an anti triangle*/
+
+  background-image: image-set()
 }
 
 h1 {
