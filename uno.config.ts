@@ -2,5 +2,8 @@
 import { defineConfig } from 'unocss'
 
 export default defineConfig({
-  // ...UnoCSS options
+  rules: [
+    // Define a custom rule for your Nerd Font
+    ['nerd', { 'font-family': '"FiraCode Nerd Font", monospace' }],
+  ],
 })
