@@ -5,9 +5,9 @@ defineProps<{ msg: string }>()
 <template>
     <div class="flex md:flex-row flex-col mb-5 h-screen items-center">
         <div class="flex md:mr-5 md:w-2/5 justify-center mb-2">
-            <img src="../assets/miyago_avatar.png" alt="" class="w-58 h-58 rounded-xl md:w-92 md:h-92 opacity-80">
+            <img src="../assets/miyago_avatar.png" alt="" class="w-58 h-58 rounded-xl md:w-106 md:h-106 opacity-80">
         </div>
-        <div class="flex flex-col md:ml-5 md:w-3/5">
+        <div class="flex flex-col md:ml-5 md:w-3/5 items-center">
             <p class="nerd md:text-6xl text-4xl mb-2 font-bold mt-0 md:text-left">$about_me</p>
             <ul class="flex flex-col items-start list-inside">
                 <li class="md:text-xl text-lg mb-2">名字　　|　水源宮語</li>
