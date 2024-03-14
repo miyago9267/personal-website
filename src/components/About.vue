@@ -5,11 +5,11 @@ defineProps<{ msg: string }>()
 <template>
     <div class="flex md:flex-row flex-col mb-5 h-screen items-center">
         <div class="flex md:mr-5 md:w-2/5 justify-center mb-2">
-            <img src="../assets/miyago_avatar.png" alt="" class="w-58 h-58 rounded-xl md:w-106 md:h-106 opacity-80">
+            <img src="https://drive.miyago9267.com/d/home/miyago/Pictures/pic/miyago_avatar.png" alt="" class="w-58 h-58 rounded-xl md:w-106 md:h-106 opacity-80">
         </div>
-        <div class="flex flex-col md:ml-5 md:w-3/5 items-center">
+        <div class="flex flex-col mt-5 md:ml-5 md:w-3/5 items-center">
             <p class="nerd md:text-6xl text-4xl mb-2 font-bold mt-0 md:text-left">$about_me</p>
-            <ul class="flex flex-col items-start list-inside">
+            <ul class="flex flex-col items-start list-inside pl-0">
                 <li class="md:text-xl text-lg mb-2">名字　　|　水源宮語</li>
                 <li class="md:text-xl text-lg mb-2">暱稱　　|　宮語、Miyago</li>
                 <li class="md:text-xl text-lg mb-2">關鍵字　|　ICT、MUG、EDM</li>
