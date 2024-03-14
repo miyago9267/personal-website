@@ -38,7 +38,7 @@ interface JobList {
 
 const active_panel_handler = (value: string) => {
     active_panel.value = value;
-    console.log(active_panel.value);
+    // console.log(active_panel.value);
 }
 
 const active_panel = ref('1');
@@ -76,10 +76,25 @@ const listItems = ref<JobList[]>(
             ExpTitle: "遊戲相關",
             ExpList: [
                 {
+                    JobYear: "音樂遊戲",
                     Jobs: [
                         "Bang Dream 28以下全AP確定 最高AP29",
                         "世界計劃 真皆傳(AP數35 最高AP 31)",
-                        "Arcaea 摘星(Ptt 12.25)"
+                        "Arcaea 摘星(Ptt 12.25)",
+                        "Maimai Rating 14250"
+                    ]
+                }
+            ]
+        },
+        {
+            Panel_ID: "3",
+            ExpTitle: "其他學經歷 && 專長",
+            ExpList: [
+                {
+                    JobYear: "粉絲專頁",
+                    Jobs: [
+                        "佩可美食協會 - 花子編",
+                        "法蘭西斯莫來管 - 盆景植物編"
                     ]
                 }
             ]
