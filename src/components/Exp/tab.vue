@@ -1,7 +1,7 @@
 <template>
     <div>
         <button class="border rounded-xl bg-gray-800 hover:bg-gray-700 w-30 my-1 md:text-left"
-            @click="togglePanelActive">
+            @click="progs.controll_panel && togglePanelActive(progs.controll_panel)">
             <span class="text-xl text-left"> {{ title }} </span>
         </button>
     </div>
@@ -11,13 +11,17 @@
 
 interface TabProps {
     title?: string;
+    controll_panel?: string;
 }
 
-defineProps<TabProps>()
+interface TabEmits {
+    (event: 'toggle', value: string): void;
+}
 
-defineEmits(['toggle'])
-const togglePanelActive = () => {
-  emit('toggle');
+const progs = defineProps<TabProps>()
+const emit = defineEmits<TabEmits>()
+const togglePanelActive = (value: string) => {
+  emit('toggle', value);
 }
 
 </script>

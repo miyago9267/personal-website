@@ -3,11 +3,14 @@
         <div class="flex flex-col md:ml-5 w-full">
             <p class="nerd md:text-6xl text-4xl my-8 font-bold md:text-left">$experience</p>
             <div class="flex flex-col md:flex-row w-full">
-                <tablist />
+                <tablist @toggle_active="active_panel_handler"/>
                 <splitline />
-                <div class="relative  md:w-2/3 md:mx-2 md:my-2 my-4">
-                    <panel :ExpTitle="progs.ExpTitle" :ExpList="progs.ExpList" @toggle="togglePanelActive"
-                        v-for="progs in listItems" class="absolute left-0 md:w-2/3 md:mx-2 md:my-2 my-4"/>
+                <div class="relative  md:w-full md:mx-2 md:my-2 my-4">
+                    <div v-for="(item, index) in listItems" :key="index">
+                        <panel :PanelID="item.Panel_ID"
+                            :ExpTitle="item.ExpTitle" :ExpList="item.ExpList"
+                            v-if="active_panel===item.Panel_ID" class="absolute w-full left-0 md:w-2/3 md:mx-2 md:my-2 my-4"/>
+                    </div>
                 </div>
             </div>
         </div>
@@ -22,25 +25,28 @@ import { ref } from 'vue';
 
 defineProps<{ msg: string }>()
 
-const active_panel = ref(0);
-
-const togglePanelActive = () => {
-
-}
-
 interface ExpList {
     JobYear?: string;
     Jobs: string[];
 }
 
 interface JobList {
-     ExpTitle: string;
-     ExpList: ExpList[];
+    Panel_ID: string;
+    ExpTitle: string;
+    ExpList: ExpList[];
 }
+
+const active_panel_handler = (value: string) => {
+    active_panel.value = value;
+    console.log(active_panel.value);
+}
+
+const active_panel = ref('1');
 
 const listItems = ref<JobList[]>(
     [
         {
+            Panel_ID: "1",
             ExpTitle: "資訊技術相關",
             ExpList: [
                 {
@@ -66,6 +72,7 @@ const listItems = ref<JobList[]>(
             ]
         },
         {
+            Panel_ID: "2",
             ExpTitle: "遊戲相關",
             ExpList: [
                 {
