@@ -50,17 +50,27 @@ const listItems = ref<JobList[]>(
             ExpTitle: "資訊技術相關",
             ExpList: [
                 {
+                    JobYear: "2017",
+                    Jobs: [
+                        "Greenmech世界機關王大賽 世界賽入選",
+                    ]
+                },
+                {
                     JobYear: "2019",
                     Jobs: [
-                        "25th 鳳山高中電資社 - 社長",
+                        "25th 國立鳳山高中 電腦資訊社 - 社長",
+                        "2019 高級中學學科能力競賽 高屏區 - 佳作",
+                        "SCIST工作人員"
                     ]
                 },
                 {
                     JobYear: "2022",
                     Jobs: [
-                        "4th 銘傳大學GDSC - 核心團隊",
-                        "2022 PUPC - 銅牌",
-                        "2022 ICPC桃園站 - 參賽"
+                        "大學程式能力檢定CPE - 5/7(Pr97)",
+                        "4th 銘傳大學Google學生開發者社群 - 核心團隊",
+                        "4th 銘傳大學開源社 - 學術",
+                        "2022 全國私立大專校院程式競賽PUPC - 銅牌",
+                        "2022 國際大學生程式設計競賽ICPC 臺灣區 - 參賽"
                     ]
                 },
                 {
@@ -78,9 +88,9 @@ const listItems = ref<JobList[]>(
                 {
                     JobYear: "音樂遊戲",
                     Jobs: [
-                        "Bang Dream 28以下全AP確定 最高AP29",
-                        "世界計劃 真皆傳(AP數35 最高AP 31)",
-                        "Arcaea 摘星(Ptt 12.25)",
+                        "Bang Dream 28以下全AP確定 最高AP29 最高FC29",
+                        "世界計劃 真皆傳(AP數35 最高AP 31 最高FC 32)",
+                        "Arcaea 摘星(Ptt 12.25) PM數100",
                         "Maimai Rating 14250"
                     ]
                 }
@@ -88,13 +98,19 @@ const listItems = ref<JobList[]>(
         },
         {
             Panel_ID: "3",
-            ExpTitle: "其他學經歷 && 專長",
+            ExpTitle: "其他學經歷",
             ExpList: [
                 {
                     JobYear: "粉絲專頁",
                     Jobs: [
                         "佩可美食協會 - 花子編",
                         "法蘭西斯莫來管 - 盆景植物編"
+                    ],
+                },
+                {
+                    JobYear: "其他",
+                    Jobs: [
+                        "我有女友(我女友叫我寫的"
                     ]
                 }
             ]
