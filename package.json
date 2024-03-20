@@ -1,12 +1,13 @@
 {
   "name": "myg-official-site",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "build": "vite build",
+    "preview": "vite preview",
+    "optimize": "vite optimize"
   },
   "dependencies": {
     "unocss": "^0.58.0",
