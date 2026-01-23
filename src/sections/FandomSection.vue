@@ -30,7 +30,7 @@ const { activeItem, activeIndex, hasImages, open, close, prev, next } = useGalle
       <div
         v-for="group in profile.fandoms"
         :key="group.title"
-        class="rounded-[20px] p-6 bg-[var(--card-bg)] border border-[var(--card-border)] shadow-[var(--card-shadow)]"
+        class="card-surface rounded-[20px] p-6 bg-[var(--card-bg)] shadow-[var(--card-shadow)]"
       >
         <h2 class="text-lg font-semibold text-[var(--text)]">
           {{ group.title }}
@@ -43,7 +43,7 @@ const { activeItem, activeIndex, hasImages, open, close, prev, next } = useGalle
           >
             <span>{{ item.name }}</span>
             <button
-              class="rounded-full border border-[var(--card-border)] px-3 py-1 text-[12px] text-[var(--muted)] transition hover:text-[var(--text)]"
+              class="rounded-full px-3 py-1 text-[12px] text-[var(--muted)] bg-[var(--panel-bg)] shadow-[var(--card-shadow)] transition hover:text-[var(--text)]"
               type="button"
               @click="open(item)"
             >
@@ -76,14 +76,14 @@ const { activeItem, activeIndex, hasImages, open, close, prev, next } = useGalle
         class="mt-4 grid grid-cols-[auto_1fr_auto] gap-3 items-center lt-sm:grid-cols-1"
       >
         <button
-          class="w-9 h-9 rounded-full border border-[var(--card-border)] bg-[var(--card-bg)] text-[var(--muted)] transition hover:text-[var(--text)] disabled:opacity-40 disabled:cursor-not-allowed lt-sm:w-full lt-sm:h-8"
+          class="w-9 h-9 rounded-full bg-[var(--card-bg)] text-[var(--muted)] shadow-[var(--card-shadow)] transition hover:text-[var(--text)] disabled:opacity-40 disabled:cursor-not-allowed lt-sm:w-full lt-sm:h-8"
           type="button"
           :disabled="activeIndex === 0"
           @click="prev"
         >
           ←
         </button>
-        <div class="overflow-hidden rounded-[12px] border border-[var(--card-border)] bg-black/10">
+        <div class="overflow-hidden rounded-[12px] bg-black/10">
           <div
             class="flex transition-transform duration-[350ms] ease-[var(--ease)]"
             :style="{ transform: `translateX(-${activeIndex * 100}%)` }"
@@ -102,7 +102,7 @@ const { activeItem, activeIndex, hasImages, open, close, prev, next } = useGalle
           </div>
         </div>
         <button
-          class="w-9 h-9 rounded-full border border-[var(--card-border)] bg-[var(--card-bg)] text-[var(--muted)] transition hover:text-[var(--text)] disabled:opacity-40 disabled:cursor-not-allowed lt-sm:w-full lt-sm:h-8"
+          class="w-9 h-9 rounded-full bg-[var(--card-bg)] text-[var(--muted)] shadow-[var(--card-shadow)] transition hover:text-[var(--text)] disabled:opacity-40 disabled:cursor-not-allowed lt-sm:w-full lt-sm:h-8"
           type="button"
           :disabled="activeItem.images ? activeIndex === activeItem.images.length - 1 : true"
           @click="next"

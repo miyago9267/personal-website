@@ -22,7 +22,7 @@ const profile = useProfile()
         :href="channel.href"
         target="_blank"
         rel="noreferrer"
-        class="rounded-[20px] p-6 transition bg-[var(--card-bg)] border border-[var(--card-border)] shadow-[var(--card-shadow)] hover:border-[var(--card-border)]"
+        class="card-surface rounded-[20px] p-6 transition bg-[var(--card-bg)] shadow-[var(--card-shadow)]"
       >
         <p class="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">{{ channel.title }}</p>
         <p class="mt-3 text-lg text-[var(--text)]">{{ channel.detail }}</p>

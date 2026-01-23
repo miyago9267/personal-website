@@ -20,7 +20,7 @@ const profile = useProfile()
       <article
         v-for="group in profile.experience"
         :key="group.title"
-        class="rounded-[20px] p-6 md:p-8 bg-[var(--card-bg)] border border-[var(--card-border)] shadow-[var(--card-shadow)]"
+        class="card-surface rounded-[20px] p-6 md:p-8 bg-[var(--card-bg)] shadow-[var(--card-shadow)]"
       >
         <h3 class="text-xl md:text-2xl text-[var(--text)] font-semibold m-0">
           {{ group.title }}

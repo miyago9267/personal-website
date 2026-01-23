@@ -19,14 +19,14 @@ const close = () => emit('close')
       @click.self="close"
     >
       <div
-        class="w-[min(720px,92vw)] bg-[var(--panel-bg)] border border-[var(--panel-border)] rounded-[16px] p-6 max-h-[85vh] overflow-auto"
+        class="w-[min(720px,92vw)] bg-[var(--panel-bg)] rounded-[16px] p-6 max-h-[85vh] overflow-auto shadow-[var(--card-shadow)]"
       >
         <div class="flex items-center justify-between gap-3 text-[var(--text)]">
           <h3 class="text-[20px] text-[var(--text)]">
             {{ title }}
           </h3>
           <button
-            class="bg-transparent border border-[var(--card-border)] text-[12px] text-[var(--muted)] rounded-full px-3 py-1 hover:text-[var(--text)]"
+            class="bg-[var(--card-bg)] text-[12px] text-[var(--muted)] rounded-full px-3 py-1 shadow-[var(--card-shadow)] hover:text-[var(--text)]"
             type="button"
             @click="close"
           >

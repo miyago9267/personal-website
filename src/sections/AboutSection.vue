@@ -13,7 +13,7 @@ const profile = useProfile()
   >
     <div class="grid gap-10 md:grid-cols-[0.9fr_1.1fr] items-center">
       <div class="relative">
-        <div class="rounded-[24px] p-6 md:p-8 bg-[var(--card-bg)] border border-[var(--card-border)] shadow-[var(--card-shadow)]">
+        <div class="card-surface rounded-[24px] p-6 md:p-8 bg-[var(--card-bg)] shadow-[var(--card-shadow)]">
           <img
             :src="profile.avatarUrl"
             alt="Miyago avatar"

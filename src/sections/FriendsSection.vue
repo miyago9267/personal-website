@@ -26,7 +26,7 @@ const profile = useProfile()
           :href="item.href"
           target="_blank"
           rel="noreferrer"
-          class="rounded-[18px] p-5 text-[var(--text)]/90 transition bg-[var(--card-bg)] border border-[var(--card-border)] shadow-[var(--card-shadow)] hover:border-[var(--card-border)]"
+          class="card-surface rounded-[18px] p-5 text-[var(--text)]/90 transition bg-[var(--card-bg)] shadow-[var(--card-shadow)]"
         >
           <p class="text-sm uppercase tracking-[0.3em] text-[var(--muted)]">{{ item.name }}</p>
           <p class="mt-3 text-base text-[var(--text)]/80">{{ item.description }}</p>

@@ -6,7 +6,7 @@ const profile = useProfile()
 
 <template>
   <section
-    class="relative min-h-[calc(100vh-var(--header-height))] flex flex-col items-center justify-center text-center py-6 translate-y-[var(--hero-offset)] lt-sm:py-4 lt-sm:pb-8"
+    class="hero-section relative min-h-[calc(100vh-var(--header-height))] flex flex-col items-center justify-center text-center py-6 translate-y-[var(--hero-offset)] lt-sm:py-4 lt-sm:pb-8"
   >
     <span
       class="hidden lt-sm:block absolute -top-2 left-0 right-0 h-[60px] bg-[radial-gradient(circle,rgba(186,142,166,0.35)_1px,transparent_1.5px)] bg-[size:12px_12px] opacity-60 pointer-events-none"

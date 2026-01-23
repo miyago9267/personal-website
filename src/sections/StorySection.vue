@@ -26,7 +26,7 @@ const profile = useProfile()
         </div>
       </div>
       <div class="grid gap-4 md:mt-16">
-        <div class="rounded-[20px] p-6 bg-[var(--card-bg)] border border-[var(--card-border)] shadow-[var(--card-shadow)]">
+        <div class="card-surface rounded-[20px] p-6 bg-[var(--card-bg)] shadow-[var(--card-shadow)]">
           <p class="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">
             Identity
           </p>
@@ -37,7 +37,7 @@ const profile = useProfile()
             {{ profile.name }}
           </p>
         </div>
-        <div class="rounded-[20px] p-6 bg-[var(--card-bg)] border border-[var(--card-border)] shadow-[var(--card-shadow)]">
+        <div class="card-surface rounded-[20px] p-6 bg-[var(--card-bg)] shadow-[var(--card-shadow)]">
           <p class="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">
             Current Focus
           </p>

@@ -31,7 +31,7 @@ const socialItems = profile.socials.map((item) => {
         :href="item.href"
         target="_blank"
         rel="noreferrer"
-        class="w-9 h-9 rounded-full border border-[var(--card-border)] text-[11px] text-[var(--muted)] flex items-center justify-center font-['JetBrains_Mono'] bg-[var(--card-bg)] transition transform hover:(text-[var(--text)] -translate-y-0.5)"
+        class="w-9 h-9 rounded-full text-[11px] text-[var(--muted)] flex items-center justify-center font-['JetBrains_Mono'] bg-[var(--card-bg)] shadow-[var(--card-shadow)] transition transform hover:(text-[var(--text)] -translate-y-0.5)"
         :aria-label="item.name"
       >
         {{ item.label }}
@@ -40,7 +40,7 @@ const socialItems = profile.socials.map((item) => {
     </div>
     <button
       v-show="showTop"
-      class="absolute right-6 bottom-6 w-11 h-11 rounded-full border border-[var(--card-border)] bg-[var(--card-bg)] text-[16px] text-[var(--muted)] cursor-pointer pointer-events-auto transition transform hover:(text-[var(--text)] -translate-y-0.5) lt-[720px]:right-4 lt-[720px]:bottom-4"
+      class="absolute right-6 bottom-6 w-11 h-11 rounded-full bg-[var(--card-bg)] text-[16px] text-[var(--muted)] shadow-[var(--card-shadow)] cursor-pointer pointer-events-auto transition transform hover:(text-[var(--text)] -translate-y-0.5) lt-[720px]:right-4 lt-[720px]:bottom-4"
       type="button"
       @click="scrollToTop"
     >

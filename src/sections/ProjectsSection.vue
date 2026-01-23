@@ -20,7 +20,7 @@ const profile = useProfile()
       <article
         v-for="project in profile.sideProjects"
         :key="project.name"
-        class="rounded-[20px] p-6 flex flex-col justify-between gap-6 bg-[var(--card-bg)] border border-[var(--card-border)] shadow-[var(--card-shadow)]"
+        class="card-surface rounded-[20px] p-6 flex flex-col justify-between gap-6 bg-[var(--card-bg)] shadow-[var(--card-shadow)]"
       >
         <div>
           <h3 class="text-xl text-[var(--text)] font-semibold">

@@ -10,13 +10,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --ease: cubic-bezier(0.645, 0.045, 0.355, 1);
-  --bg: #fff1f5;
+  --bg: #fff4f8;
   --text: #2b1f2a;
   --muted: rgba(77, 48, 70, 0.65);
-  --card-bg: rgba(255, 255, 255, 0.92);
-  --card-border: rgba(186, 142, 166, 0.35);
-  --card-shadow: 0 16px 30px rgba(128, 82, 112, 0.12);
-  --panel-bg: #fff7f9;
+  --card-bg: #ffffff;
+  --card-border: rgba(186, 142, 166, 0.45);
+  --card-shadow: 0 16px 28px rgba(128, 82, 112, 0.18);
+  --panel-bg: #ffe3ec;
   --panel-border: rgba(186, 142, 166, 0.35);
   --header-bg: rgba(255, 241, 245, 0.9);
   --header-border: rgba(186, 142, 166, 0.25);
@@ -29,13 +29,13 @@
 
 [data-theme='light'] {
   color-scheme: light;
-  --bg: #fff1f5;
+  --bg: #fff4f8;
   --text: #2b1f2a;
   --muted: rgba(77, 48, 70, 0.65);
-  --card-bg: rgba(255, 255, 255, 0.92);
-  --card-border: rgba(186, 142, 166, 0.35);
-  --card-shadow: 0 16px 30px rgba(128, 82, 112, 0.12);
-  --panel-bg: #fff7f9;
+  --card-bg: #ffffff;
+  --card-border: rgba(186, 142, 166, 0.45);
+  --card-shadow: 0 16px 28px rgba(128, 82, 112, 0.18);
+  --panel-bg: #ffe3ec;
   --panel-border: rgba(186, 142, 166, 0.35);
   --header-bg: rgba(255, 241, 245, 0.9);
   --header-border: rgba(186, 142, 166, 0.25);
@@ -108,41 +108,64 @@ h3 {
 
 .page-content > section {
   opacity: 0;
-  animation: fade-up 0.9s var(--ease) forwards;
+  transform: translateY(32px) scale(0.98);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+  transition-delay: var(--reveal-delay, 0s);
   scroll-margin-top: 96px;
   will-change: transform, opacity;
 }
 
+.page-content > section.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.is-loading .page-content > section {
+  opacity: 0;
+  transform: translateY(32px) scale(0.98);
+  transition: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .page-content > section:not(.hero-section) {
+    transition: transform 0.25s var(--ease);
+  }
+
+  .page-content > section:not(.hero-section):hover {
+    transform: translateY(-3px) scale(1.004);
+  }
+}
+
 .page-content > section:nth-of-type(1) {
-  animation-delay: 0.1s;
+  --reveal-delay: 0.05s;
 }
 
 .page-content > section:nth-of-type(2) {
-  animation-delay: 0.2s;
+  --reveal-delay: 0.1s;
 }
 
 .page-content > section:nth-of-type(3) {
-  animation-delay: 0.3s;
+  --reveal-delay: 0.15s;
 }
 
 .page-content > section:nth-of-type(4) {
-  animation-delay: 0.4s;
+  --reveal-delay: 0.2s;
 }
 
 .page-content > section:nth-of-type(5) {
-  animation-delay: 0.5s;
+  --reveal-delay: 0.25s;
 }
 
 .page-content > section:nth-of-type(6) {
-  animation-delay: 0.6s;
+  --reveal-delay: 0.3s;
 }
 
 .page-content > section:nth-of-type(7) {
-  animation-delay: 0.7s;
+  --reveal-delay: 0.35s;
 }
 
 .page-content > section:nth-of-type(8) {
-  animation-delay: 0.8s;
+  --reveal-delay: 0.4s;
 }
 
 .motion-float {
@@ -152,11 +175,13 @@ h3 {
 @keyframes fade-up {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(48px) scale(0.98);
+    filter: blur(6px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
+    filter: blur(0);
   }
 }
 
@@ -202,8 +227,9 @@ h3 {
 
 @media (prefers-reduced-motion: reduce) {
   .page-content > section {
-    animation: none;
     opacity: 1;
+    transform: none;
+    transition: none;
   }
 
   .motion-float {
@@ -221,6 +247,57 @@ h3 {
 
 h1, h2, h3 {
   margin: 12px 0;
+}
+
+button,
+a,
+[role='button'] {
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+[type='button'],
+[type='submit'] {
+  border: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+button:focus,
+button:active,
+a:focus,
+a:active,
+[role='button']:focus,
+[role='button']:active {
+  outline: none;
+  box-shadow: none;
+}
+
+button:focus-visible,
+a:focus-visible,
+[role='button']:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+.card-surface {
+  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
+  transform: translateZ(0);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card-surface:hover {
+    transform: translateY(-2px) scale(1.003);
+    box-shadow: 0 12px 20px rgba(128, 82, 112, 0.16);
+  }
+}
+
+button::-moz-focus-inner {
+  border: 0;
 }
 
 @media (max-width: 640px) {
@@ -262,5 +339,44 @@ h1, h2, h3 {
   }
   to {
     transform: translateX(0);
+  }
+}
+
+.theme-wipe {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.theme-wipe--sunrise {
+  background: radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.9), rgba(255, 221, 235, 0.95) 60%, rgba(255, 241, 245, 0) 100%);
+  animation: theme-rise 0.7s var(--ease);
+}
+
+.theme-wipe--sunset {
+  background: radial-gradient(circle at 30% 20%, rgba(22, 22, 22, 0.9), rgba(36, 36, 36, 0.95) 55%, rgba(36, 36, 36, 0) 100%);
+  animation: theme-fall 0.7s var(--ease);
+}
+
+@keyframes theme-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes theme-fall {
+  from {
+    opacity: 0;
+    transform: translateY(-12%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

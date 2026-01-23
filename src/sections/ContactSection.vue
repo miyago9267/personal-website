@@ -11,7 +11,7 @@ const profile = useProfile()
     id="contact"
     class="py-4 md:py-8"
   >
-    <div class="rounded-[24px] p-8 md:p-12 bg-[var(--card-bg)] border border-[var(--card-border)] shadow-[var(--card-shadow)]">
+    <div class="card-surface rounded-[24px] p-8 md:p-12 bg-[var(--card-bg)] shadow-[var(--card-shadow)]">
       <SectionTitle
         kicker="Contact"
         :title="profile.contact.title"
@@ -29,7 +29,7 @@ const profile = useProfile()
             :href="social.href"
             target="_blank"
             rel="noreferrer"
-            class="rounded-full border border-[var(--card-border)] px-4 py-1.5 text-[var(--muted)] transition hover:text-[var(--text)]"
+            class="rounded-full px-4 py-1.5 text-[var(--muted)] bg-[var(--panel-bg)] shadow-[var(--card-shadow)] transition hover:text-[var(--text)]"
           >
             {{ social.name }}
           </a>
