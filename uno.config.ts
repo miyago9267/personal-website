@@ -1,9 +1,8 @@
-// uno.config.ts
-import { defineConfig } from 'unocss'
+import { defineConfig, presetUno } from 'unocss'
 
 export default defineConfig({
+  presets: [presetUno()],
   rules: [
-    // Define a custom rule for your Nerd Font
     ['nerd', { 'font-family': '"FiraCode Nerd Font", monospace' }],
   ],
 })

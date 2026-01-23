@@ -5,11 +5,11 @@
             <div class="flex flex-col md:flex-row w-full">
                 <tablist @toggle_active="active_panel_handler"/>
                 <splitline />
-                <div class="relative  md:w-full md:mx-2 md:my-2 my-4">
+                <div class="relative  md:w-full md:mx-2 md:my-2 my-8">
                     <div v-for="(item, index) in listItems" :key="index">
                         <panel :PanelID="item.Panel_ID"
                             :ExpTitle="item.ExpTitle" :ExpList="item.ExpList"
-                            v-if="active_panel===item.Panel_ID" class="absolute w-full left-0 md:w-2/3 md:mx-2 md:my-2 my-4"/>
+                            v-if="active_panel===item.Panel_ID" class="absolute w-full left-0 md:w-2/3 md:mx-2 md:my-2 my-8"/>
                     </div>
                 </div>
             </div>

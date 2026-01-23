@@ -1,0 +1,36 @@
+{
+  "navLinks": [
+    {
+      "label": "Story",
+      "href": "#story"
+    },
+    {
+      "label": "About",
+      "href": "#about"
+    },
+    {
+      "label": "Experience",
+      "href": "#experience"
+    },
+    {
+      "label": "Fandom",
+      "href": "#fandoms"
+    },
+    {
+      "label": "Projects",
+      "href": "#projects"
+    },
+    {
+      "label": "Social",
+      "href": "#social"
+    },
+    {
+      "label": "Friends",
+      "href": "#friends"
+    },
+    {
+      "label": "Blog",
+      "href": "/blog"
+    }
+  ]
+}
