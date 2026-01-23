@@ -1,11 +1,16 @@
 <script setup lang="ts">
-import profile from '../data/profile.json'
+import { useProfile } from '../composables/useProfile'
+
 import SectionTitle from '../components/ui/SectionTitle.vue'
 import Tag from '../components/ui/Tag.vue'
+const profile = useProfile()
 </script>
 
 <template>
-  <section id="projects" class="py-4 md:py-8">
+  <section
+    id="projects"
+    class="py-4 md:py-8"
+  >
     <SectionTitle
       kicker="Side Projects"
       title="持續輸出的 Side Project"
@@ -15,21 +20,29 @@ import Tag from '../components/ui/Tag.vue'
       <article
         v-for="project in profile.sideProjects"
         :key="project.name"
-        class="card rounded-[20px] p-6 flex flex-col justify-between gap-6"
+        class="rounded-[20px] p-6 flex flex-col justify-between gap-6 bg-[var(--card-bg)] border border-[var(--card-border)] shadow-[var(--card-shadow)]"
       >
         <div>
-          <h3 class="text-xl text-gray-50 font-semibold">{{ project.name }}</h3>
-          <p class="mt-3 text-sm md:text-base text-gray-300/70">{{ project.description }}</p>
+          <h3 class="text-xl text-[var(--text)] font-semibold">
+            {{ project.name }}
+          </h3>
+          <p class="mt-3 text-sm md:text-base text-[var(--muted)]">
+            {{ project.description }}
+          </p>
         </div>
         <div class="flex flex-wrap gap-2">
-          <Tag v-for="item in project.stack" :key="item" :label="item" />
+          <Tag
+            v-for="item in project.stack"
+            :key="item"
+            :label="item"
+          />
         </div>
         <a
           v-if="project.href !== '#'"
           :href="project.href"
           target="_blank"
           rel="noreferrer"
-          class="text-sm text-gray-300 hover:text-gray-50 transition"
+          class="text-sm text-[var(--muted)] hover:text-[var(--text)] transition"
         >
           View project →
         </a>

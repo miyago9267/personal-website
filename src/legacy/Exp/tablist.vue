@@ -1,7 +1,12 @@
 <template>
-    <div class="flex flex-warp md:flex-col justify-around md:justify-start">
-        <tab v-for="item in tabList" :title="item.title" :controll_panel="item.controll_panel" @toggle="handleToggle"/>
-    </div>
+  <div class="flex flex-warp md:flex-col justify-around md:justify-start">
+    <tab
+      v-for="item in tabList"
+      :title="item.title"
+      :controll_panel="item.controll_panel"
+      @toggle="handleToggle"
+    />
+  </div>
 </template>
 
 <script setup lang="ts">

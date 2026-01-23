@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
-import profile from '../data/profile.json'
+import { useProfile } from '../composables/useProfile'
+
 import SectionTitle from '../components/ui/SectionTitle.vue'
 import Modal from '../components/ui/Modal.vue'
+import { useGalleryModal } from '../composables/useGalleryModal'
 
+const profile = useProfile()
 type FandomItem = {
   name: string
   summary: string
@@ -11,33 +13,14 @@ type FandomItem = {
   images?: string[]
 }
 
-const activeItem = ref<FandomItem | null>(null)
-const activeImageIndex = ref(0)
-
-const hasImages = computed(() => (activeItem.value?.images?.length ?? 0) > 0)
-
-const openItem = (item: FandomItem) => {
-  activeItem.value = item
-  activeImageIndex.value = 0
-}
-
-const closeItem = () => {
-  activeItem.value = null
-}
-
-const prevImage = () => {
-  if (!activeItem.value?.images?.length) return
-  activeImageIndex.value = Math.max(0, activeImageIndex.value - 1)
-}
-
-const nextImage = () => {
-  if (!activeItem.value?.images?.length) return
-  activeImageIndex.value = Math.min(activeItem.value.images.length - 1, activeImageIndex.value + 1)
-}
+const { activeItem, activeIndex, hasImages, open, close, prev, next } = useGalleryModal<FandomItem>()
 </script>
 
 <template>
-  <section id="fandoms" class="py-4 md:py-8">
+  <section
+    id="fandoms"
+    class="py-4 md:py-8"
+  >
     <SectionTitle
       kicker="Fandom"
       title="網路與 ACG 坑單"
@@ -47,53 +30,91 @@ const nextImage = () => {
       <div
         v-for="group in profile.fandoms"
         :key="group.title"
-        class="card rounded-[20px] p-6"
+        class="rounded-[20px] p-6 bg-[var(--card-bg)] border border-[var(--card-border)] shadow-[var(--card-shadow)]"
       >
-        <h2 class="text-lg font-semibold text-gray-100">{{ group.title }}</h2>
-        <div class="mt-4 grid gap-3 text-gray-100/80">
-          <div v-for="item in group.items" :key="item.name" class="flex items-center justify-between gap-3">
+        <h2 class="text-lg font-semibold text-[var(--text)]">
+          {{ group.title }}
+        </h2>
+        <div class="mt-4 grid gap-3 text-[var(--text)]/80">
+          <div
+            v-for="item in group.items"
+            :key="item.name"
+            class="flex items-center justify-between gap-3"
+          >
             <span>{{ item.name }}</span>
-            <button class="fandom__open" type="button" @click="openItem(item)">查看</button>
+            <button
+              class="rounded-full border border-[var(--card-border)] px-3 py-1 text-[12px] text-[var(--muted)] transition hover:text-[var(--text)]"
+              type="button"
+              @click="open(item)"
+            >
+              查看
+            </button>
           </div>
         </div>
       </div>
     </div>
 
-    <Modal v-if="activeItem" :is-open="!!activeItem" :title="activeItem.name" @close="closeItem">
-      <p class="text-sm text-gray-200/80">{{ activeItem.summary }}</p>
-      <ul class="mt-4 grid gap-2 text-sm text-gray-200/80">
-        <li v-for="detail in activeItem.details" :key="detail">{{ detail }}</li>
+    <Modal
+      v-if="activeItem"
+      :is-open="!!activeItem"
+      :title="activeItem.name"
+      @close="close"
+    >
+      <p class="text-sm text-[var(--muted)]">
+        {{ activeItem.summary }}
+      </p>
+      <ul class="mt-4 grid gap-2 text-sm text-[var(--muted)]">
+        <li
+          v-for="detail in activeItem.details"
+          :key="detail"
+        >
+          {{ detail }}
+        </li>
       </ul>
-      <div v-if="hasImages" class="modal__carousel">
+      <div
+        v-if="hasImages"
+        class="mt-4 grid grid-cols-[auto_1fr_auto] gap-3 items-center lt-sm:grid-cols-1"
+      >
         <button
-          class="modal__nav modal__nav--prev"
+          class="w-9 h-9 rounded-full border border-[var(--card-border)] bg-[var(--card-bg)] text-[var(--muted)] transition hover:text-[var(--text)] disabled:opacity-40 disabled:cursor-not-allowed lt-sm:w-full lt-sm:h-8"
           type="button"
-          :disabled="activeImageIndex === 0"
-          @click="prevImage"
+          :disabled="activeIndex === 0"
+          @click="prev"
         >
           ←
         </button>
-        <div class="modal__viewport">
+        <div class="overflow-hidden rounded-[12px] border border-[var(--card-border)] bg-black/10">
           <div
-            class="modal__track"
-            :style="{ transform: `translateX(-${activeImageIndex * 100}%)` }"
+            class="flex transition-transform duration-[350ms] ease-[var(--ease)]"
+            :style="{ transform: `translateX(-${activeIndex * 100}%)` }"
           >
-            <div v-for="img in activeItem.images" :key="img" class="modal__slide">
-              <img :src="img" :alt="activeItem.name" />
+            <div
+              v-for="img in activeItem.images"
+              :key="img"
+              class="min-w-full"
+            >
+              <img
+                :src="img"
+                :alt="activeItem.name"
+                class="w-full h-[360px] lt-sm:h-[240px] object-contain block bg-black/20"
+              >
             </div>
           </div>
         </div>
         <button
-          class="modal__nav modal__nav--next"
+          class="w-9 h-9 rounded-full border border-[var(--card-border)] bg-[var(--card-bg)] text-[var(--muted)] transition hover:text-[var(--text)] disabled:opacity-40 disabled:cursor-not-allowed lt-sm:w-full lt-sm:h-8"
           type="button"
-          :disabled="activeItem.images ? activeImageIndex === activeItem.images.length - 1 : true"
-          @click="nextImage"
+          :disabled="activeItem.images ? activeIndex === activeItem.images.length - 1 : true"
+          @click="next"
         >
           →
         </button>
       </div>
-      <p v-if="hasImages" class="modal__counter">
-        {{ activeImageIndex + 1 }} / {{ activeItem.images?.length }}
+      <p
+        v-if="hasImages"
+        class="mt-2 text-[12px] text-[var(--muted)] text-right"
+      >
+        {{ activeIndex + 1 }} / {{ activeItem.images?.length }}
       </p>
     </Modal>
   </section>

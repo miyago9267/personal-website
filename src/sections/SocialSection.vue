@@ -1,10 +1,15 @@
 <script setup lang="ts">
-import profile from '../data/profile.json'
+import { useProfile } from '../composables/useProfile'
+
 import SectionTitle from '../components/ui/SectionTitle.vue'
+const profile = useProfile()
 </script>
 
 <template>
-  <section id="social" class="py-4 md:py-8">
+  <section
+    id="social"
+    class="py-4 md:py-8"
+  >
     <SectionTitle
       kicker="Social"
       title="社群導流與出沒點"
@@ -17,11 +22,11 @@ import SectionTitle from '../components/ui/SectionTitle.vue'
         :href="channel.href"
         target="_blank"
         rel="noreferrer"
-        class="card rounded-[20px] p-6 transition hover:border-gray-200/40"
+        class="rounded-[20px] p-6 transition bg-[var(--card-bg)] border border-[var(--card-border)] shadow-[var(--card-shadow)] hover:border-[var(--card-border)]"
       >
-        <p class="text-xs uppercase tracking-[0.3em] text-gray-300/60">{{ channel.title }}</p>
-        <p class="mt-3 text-lg text-gray-50">{{ channel.detail }}</p>
-        <span class="mt-6 inline-flex text-sm text-gray-300">Follow →</span>
+        <p class="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">{{ channel.title }}</p>
+        <p class="mt-3 text-lg text-[var(--text)]">{{ channel.detail }}</p>
+        <span class="mt-6 inline-flex text-sm text-[var(--muted)]">Follow →</span>
       </a>
     </div>
   </section>

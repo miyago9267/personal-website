@@ -1,20 +1,29 @@
 <template>
-    <div class="flex md:flex-row flex-col mb-5 h-screen">
-        <div class="flex flex-col md:ml-5 w-full">
-            <p class="nerd md:text-6xl text-4xl my-8 font-bold md:text-left">$experience</p>
-            <div class="flex flex-col md:flex-row w-full">
-                <tablist @toggle_active="active_panel_handler"/>
-                <splitline />
-                <div class="relative  md:w-full md:mx-2 md:my-2 my-8">
-                    <div v-for="(item, index) in listItems" :key="index">
-                        <panel :PanelID="item.Panel_ID"
-                            :ExpTitle="item.ExpTitle" :ExpList="item.ExpList"
-                            v-if="active_panel===item.Panel_ID" class="absolute w-full left-0 md:w-2/3 md:mx-2 md:my-2 my-8"/>
-                    </div>
-                </div>
-            </div>
+  <div class="flex md:flex-row flex-col mb-5 h-screen">
+    <div class="flex flex-col md:ml-5 w-full">
+      <p class="nerd md:text-6xl text-4xl my-8 font-bold md:text-left">
+        $experience
+      </p>
+      <div class="flex flex-col md:flex-row w-full">
+        <tablist @toggle_active="active_panel_handler" />
+        <splitline />
+        <div class="relative  md:w-full md:mx-2 md:my-2 my-8">
+          <div
+            v-for="(item, index) in listItems"
+            :key="index"
+          >
+            <panel
+              v-if="active_panel===item.Panel_ID"
+              :PanelID="item.Panel_ID"
+              :ExpTitle="item.ExpTitle"
+              :ExpList="item.ExpList"
+              class="absolute w-full left-0 md:w-2/3 md:mx-2 md:my-2 my-8"
+            />
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </template>
 
 <script setup lang="ts">
