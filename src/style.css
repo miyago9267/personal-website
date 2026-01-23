@@ -304,6 +304,21 @@ button::-moz-focus-inner {
   :root {
     --hero-offset: -6vh;
   }
+
+  .page-content > section + section {
+    margin-top: 16px;
+  }
+
+  .page-content > section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .page-content > section.is-visible {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 
