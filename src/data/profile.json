@@ -108,7 +108,7 @@
         {
           "year": "其他",
           "items": [
-            "RiceCall語音共同開發者",
+            "RiceCall語音共同開發者暨後台PM",
             "我有女友（我女友叫我寫的）"
           ]
         }
@@ -334,7 +334,7 @@
         },
         {
           "name": "maimai DX",
-          "summary": "音遊常駐坑，目標是下一張極牌。",
+          "summary": "音遊常駐坑，下一個目標是桃將。",
           "details": [
             "ID: 7089744697662",
             "Rating 15100、桃極持有。",
@@ -347,7 +347,7 @@
   "sideProjects": [
     {
       "name": "MyGO 貼圖搜尋器",
-      "description": "MyGO 相關貼圖快速搜尋與整理。",
+      "description": "MyGO 貼圖的搜尋器與資料整理。",
       "stack": [
         "Tool",
         "Web"
@@ -356,7 +356,7 @@
     },
     {
       "name": "2024 愚人節企劃 - 巴別塔精神病院",
-      "description": "2024 愚人節企劃頁面。",
+      "description": "2024 愚人節實作的劇本文字冒險網頁遊戲。",
       "stack": [
         "Event",
         "Web"
@@ -365,7 +365,7 @@
     },
     {
       "name": "2025 愚人節企劃 - 怪盜 XD 與早稻前學園偵探社",
-      "description": "2025 愚人節企劃頁面。",
+      "description": "2025 愚人節實作的視覺小說類解謎遊戲。",
       "stack": [
         "Event",
         "Web"
@@ -409,7 +409,7 @@
     }
   ],
   "contact": {
-    "title": "一起合作或聊天？",
+    "title": "想跟我聊聊？",
     "body": "如果你有興趣認識一個會思考、會寫作、又會寫程式的酷酷朋朋，歡迎和我聊聊！",
     "ctaLabel": "寄信給我",
     "ctaHref": "mailto:miyago9267@gmail.com"

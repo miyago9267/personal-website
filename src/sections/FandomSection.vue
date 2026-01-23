@@ -23,8 +23,8 @@ const { activeItem, activeIndex, hasImages, open, close, prev, next } = useGalle
   >
     <SectionTitle
       kicker="Fandom"
-      title="網路與 ACG 坑單"
-      subtitle="我混過的世界與留下的足跡，都記在這裡。"
+      title="坑單"
+      subtitle="我在活網的足跡裡所銘刻的光陰。"
     />
     <div class="my-8 grid gap-6 md:grid-cols-3">
       <div

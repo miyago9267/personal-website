@@ -10,7 +10,7 @@ defineProps<SectionTitleProps>()
 
 <template>
   <div class="flex flex-col gap-3">
-    <span class="uppercase tracking-[0.3em] text-xs text-[var(--muted)]">{{ kicker }}</span>
+    <span class="uppercase tracking-[0.3em] text-sm md:text-base text-[var(--muted)]">{{ kicker }}</span>
     <h2 class="text-3xl md:text-5xl font-semibold text-[var(--text)]">
       {{ title }}
     </h2>

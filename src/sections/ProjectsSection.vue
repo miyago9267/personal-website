@@ -13,8 +13,8 @@ const profile = useProfile()
   >
     <SectionTitle
       kicker="Side Projects"
-      title="持續輸出的 Side Project"
-      subtitle="把興趣、研究與實驗變成可追蹤的作品。"
+      title="Side Projects"
+      subtitle="把靈機一動的鬼點子變成看得見的現實。"
     />
     <div class="my-8 grid gap-6 md:grid-cols-3">
       <article

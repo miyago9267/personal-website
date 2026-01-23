@@ -12,8 +12,8 @@ const profile = useProfile()
   >
     <SectionTitle
       kicker="Social"
-      title="社群導流與出沒點"
-      subtitle="想看更多日常、作品或交流，歡迎從這裡找到我。"
+      title="社群連結"
+      subtitle="想看更多日常、作品或交流？歡迎從這裡找到我。"
     />
     <div class="my-8 grid gap-6 md:grid-cols-3">
       <a

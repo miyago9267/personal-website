@@ -15,19 +15,25 @@ import ContactSection from './sections/ContactSection.vue'
 import FriendsSection from './sections/FriendsSection.vue'
 import FooterSection from './sections/FooterSection.vue'
 
-const { isLoading } = useLoading(2500, 4000)
+const { isLoading } = useLoading(1600, 3500)
 const mainRef = ref<HTMLElement | null>(null)
 
 useSectionReveal(mainRef)
 </script>
 
 <template>
-  <div class="page-shell" :class="{ 'is-loading': isLoading }">
+  <div
+    class="page-shell"
+    :class="{ 'is-loading': isLoading }"
+  >
     <Transition name="loading-fade">
       <LoadingScreen v-if="isLoading" />
     </Transition>
     <SiteHeader />
-    <main ref="mainRef" class="page-content">
+    <main
+      ref="mainRef"
+      class="page-content"
+    >
       <HeroSection />
       <AboutSection />
       <ExperienceSection />
