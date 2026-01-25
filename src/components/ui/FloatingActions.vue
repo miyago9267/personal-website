@@ -36,7 +36,9 @@ const socialItems = profile.socials.map((item) => {
       >
         {{ item.label }}
       </a>
-      <span class="block w-px h-[120px] mx-auto bg-[var(--card-border)] lt-[720px]:hidden" />
+      <span
+        class="block w-px h-[120px] mx-auto bg-[var(--card-border)] lt-[720px]:h-10"
+      />
     </div>
     <button
       v-show="showTop"

@@ -27,11 +27,11 @@
     },
     {
       "title": "關鍵字",
-      "value": "ICT · MUG · EDM"
+      "value": "ICT · MUG · DTM"
     },
     {
       "title": "專注",
-      "value": "體驗設計 × 技術敘事"
+      "value": "文字共鳴 x 技術敘事"
     }
   ],
   "socials": [
@@ -145,6 +145,14 @@
           "images": [
             "https://drive.miyago9267.com/d/home/miyago/Pictures/link_gen/2024_11_14/Cirno_Fumo.jpg"
           ]
+        },
+        {
+          "name": "電子音樂",
+          "summary": "不限於同人或商業作品，也不限歐美或日式，喜歡研究與曲風相關的內容。",
+          "details": [
+            "主推：Hardcore Tano*C",
+            "偏好風格：硬派、東方系曲目、V家曲"
+          ]
         }
       ]
     },
@@ -245,12 +253,13 @@
       "items": [
         {
           "name": "推的曲師",
-          "summary": "偏 HiTNEX 系、硬派路線。",
+          "summary": "偏好速核、硬派路線，喜歡高侵略性、富有能量的音樂。",
           "details": [
             "Kobaryo + HiTNEX TRAX 全員",
             "Feryquitous + An",
             "Sasakure.UK + TJ.hangneil",
-            "Sefa"
+            "Sefa",
+            "Angerfist"
           ]
         },
         {
