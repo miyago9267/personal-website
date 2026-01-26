@@ -392,12 +392,12 @@
     },
     {
       "name": "Miyago9267 Blog",
-      "description": "個人 blog",
+      "description": "個人 blog，連結點進去是舊版且更詳細的自介。",
       "stack": [
         "Blog",
         "Writing"
       ],
-      "href": "https://miyago9267.com"
+      "href": "https://miyago9267.com/about"
     }
   ],
   "channels": [
