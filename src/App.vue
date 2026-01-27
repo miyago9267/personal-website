@@ -15,7 +15,7 @@ import ContactSection from './sections/ContactSection.vue'
 import FriendsSection from './sections/FriendsSection.vue'
 import FooterSection from './sections/FooterSection.vue'
 
-const { isLoading } = useLoading(1600, 3500)
+const { isLoading } = useLoading(2000, 4000)
 const mainRef = ref<HTMLElement | null>(null)
 
 useSectionReveal(mainRef)
