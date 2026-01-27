@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useLoading } from './composables/useLoading'
+import { useTheme } from './composables/useTheme'
 import { useSectionReveal } from './composables/useSectionReveal'
 import SiteHeader from './components/ui/SiteHeader.vue'
 import FloatingActions from './components/ui/FloatingActions.vue'
@@ -17,6 +18,9 @@ import FooterSection from './sections/FooterSection.vue'
 
 const { isLoading } = useLoading(2000, 4000)
 const mainRef = ref<HTMLElement | null>(null)
+
+// Initialize theme
+useTheme()
 
 useSectionReveal(mainRef)
 </script>

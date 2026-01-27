@@ -1,13 +1,26 @@
-import { onMounted, ref } from 'vue'
+import { ref } from 'vue'
 
 type Theme = 'light' | 'dark'
 
 export const useTheme = (defaultTheme: Theme = 'light') => {
-  const isDark = ref(defaultTheme === 'dark')
+  const getStoredTheme = (): Theme | null => {
+    if (typeof localStorage !== 'undefined') {
+      return localStorage.getItem('theme') as Theme | null
+    }
+    return null
+  }
+
+  const stored = getStoredTheme()
+  const currentTheme = stored ?? defaultTheme
+  const isDark = ref(currentTheme === 'dark')
 
   const setTheme = (theme: Theme) => {
-    document.documentElement.setAttribute('data-theme', theme)
-    localStorage.setItem('theme', theme)
+    if (typeof document !== 'undefined') {
+      document.documentElement.setAttribute('data-theme', theme)
+    }
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem('theme', theme)
+    }
     isDark.value = theme === 'dark'
   }
 
@@ -16,14 +29,8 @@ export const useTheme = (defaultTheme: Theme = 'light') => {
     setTheme(next)
   }
 
-  onMounted(() => {
-    const stored = localStorage.getItem('theme') as Theme | null
-    if (stored) {
-      setTheme(stored)
-      return
-    }
-    setTheme(defaultTheme)
-  })
+  // Apply immediately
+  setTheme(currentTheme)
 
   return {
     isDark,
