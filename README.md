@@ -2,6 +2,8 @@
 
 A modern personal landing page built with Vite + Vue 3 + UnoCSS, optimized for Bun.
 
+**Live Site**: <https://info.miyago9267.com>
+
 ## Getting started
 
 ```bash

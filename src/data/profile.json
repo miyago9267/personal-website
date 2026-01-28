@@ -410,6 +410,15 @@
         "Writing"
       ],
       "href": "https://miyago9267.com/about"
+    },
+    {
+      "name": "Miyagoの魔法部屋",
+      "description": "你現在看到的這個網頁。",
+      "stack": [
+        "Blog",
+        "Writing"
+      ],
+      "href": "https://github.com/miyago9267/personal-website"
     }
   ],
   "channels": [
