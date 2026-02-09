@@ -48,6 +48,72 @@
       "href": "https://discordapp.com/users/469168464955703318"
     }
   ],
+  "skills": [
+    {
+      "category": "SRE & DevOps & Infra",
+      "description": "系統可靠性工程、自動化與基礎設施",
+      "items": [
+        "Linux/Unix",
+        "Docker",
+        "Kubernetes",
+        "CI/CD",
+        "GCP",
+        "Azure",
+        "Nginx"
+      ]
+    },
+    {
+      "category": "Backend",
+      "description": "後端開發與 API 設計",
+      "items": [
+        "Go",
+        "Python",
+        "Node.js"
+      ]
+    },
+    {
+      "category": "Frontend",
+      "description": "前端開發與使用者介面",
+      "items": [
+        "Vue 3",
+        "Nuxt 4",
+        "TypeScript",
+        "UnoCSS"
+      ]
+    },
+    {
+      "category": "Database",
+      "description": "資料庫設計與管理",
+      "items": [
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB",
+        "Git"
+      ]
+    },
+    {
+      "category": "AI & ML",
+      "description": "人工智慧與機器學習",
+      "items": [
+        "PyTorch",
+        "RAG",
+        "Prompt Engineering",
+        "Fine-tuning",
+        "OpenAI SDK",
+        "Openclaw"
+      ]
+    },
+    {
+      "category": "Others",
+      "description": "其他專業技能",
+      "items": [
+        "Arduino/ESP32",
+        "Flutter",
+        "C/C++",
+        "資安基礎"
+      ]
+    }
+  ],
   "experience": [
     {
       "title": "資訊技術相關",
@@ -323,11 +389,17 @@
         },
         {
           "name": "其他",
-          "summary": "偏新番與補舊番混看。",
+          "summary": "很雜,會追新番,偶爾補舊番。",
           "details": [
             "近 20 年的番大致略知一二。",
-            "平成後期、令和新番涉獵較多。",
-            "類型很雜，族繁不及備載。"
+            "平成年代前期略有研究。",
+            "平成後期、令和年代新番涉獵較多。",
+            "類型很雜,族繁不及備載。",
+            "",
+            "部分作品列表:",
+            "笨拙上野、重啟咲良田、輝夜姬、聖鬥士、JOJO、鏈鋸人",
+            "超砲、你遭難了嗎、健身少女、坂本日常、無職、Fate系列",
+            "鋼鍊、光美系列、星光系列、美戰"
           ]
         }
       ]
