@@ -16,6 +16,7 @@ const profile = useProfile()
       title="Side Projects"
       subtitle="把靈機一動的鬼點子變成看得見的現實。"
     />
+    
     <div class="my-8 grid gap-6 md:grid-cols-3">
       <article
         v-for="project in profile.sideProjects"
@@ -50,3 +51,36 @@ const profile = useProfile()
     </div>
   </section>
 </template>
+
+<style scoped>
+/* 彩蛋:專案統計樣式 */
+.project-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(var(--text-rgb, 0, 0, 0), 0.03);
+  border-radius: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.project-stats:hover {
+  opacity: 1;
+  background: rgba(var(--text-rgb, 0, 0, 0), 0.05);
+}
+
+.stat-item {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.stat-divider {
+  color: var(--muted);
+}
+</style>
+
