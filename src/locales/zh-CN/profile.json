@@ -538,6 +538,11 @@
       "name": "Fanlan",
       "description": "繁岚的个人站",
       "href": "https://www.fanlan.net/"
+    },
+    {
+      "name": "CabLate",
+      "description": "CabLate 的个人站，AI 应用、Agent 与产品实作",
+      "href": "https://cablate.com/"
     }
   ]
 }
