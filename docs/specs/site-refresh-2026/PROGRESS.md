@@ -20,6 +20,8 @@
 - [x] 決定：JLPT 不放（Miyago 不想放）
 - [x] 決定：其他候選項目（coralline、Cosmos Music Player、Fate mod、JapaneseSpeedRun、Prisma/Kotlin）不放，因為不是還沒完成就是 fork
 - [x] Commit 並部署（2026-09-29）
+- [x] 友站新增 CabLate（https://cablate.com/）與 Nyanako（GitHub `Nanako0129`，目前沒有個人站）
+- [x] 修正：盤古之白擴充插入的 `<pangu>` 會打亂 grid 卡片，已用 `pangu { display: contents; }` 處理
 
 ### 備註
 
