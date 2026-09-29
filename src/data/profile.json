@@ -154,10 +154,19 @@
         {
           "year": "音樂遊戲",
           "items": [
-            "Bang Dream 28 以下全 AP 確定，最高 AP 29，最高 FC 30",
+            "Bang Dream（老邦）28 以下全 AP 確定，最高 AP 29，最高 FC 30",
             "世界計劃 真皆傳 (AP 數 35，最高 AP 31，最高 FC 32)",
-            "Arcaea 摘星 (Ptt 12.40)",
-            "Maimai Rating 15140，桃極持有"
+            "Arcaea 摘星 (Ptt 12.538)",
+            "Maimai Rating 15200，桃極持有"
+          ]
+        },
+        {
+          "year": "東方 Project",
+          "items": [
+            "東方錦上京 Easy 無接關、Normal 接關 3 次通關（月形石靈夢）",
+            "東方紺珠傳 Easy 完美無缺模式通關",
+            "東方紅魔鄉 Normal 通關（靈夢 A）",
+            "東方星蓮船、東方天空璋 Easy 通關"
           ]
         },
         {
@@ -210,12 +219,12 @@
         },
         {
           "name": "東方",
-          "summary": "一設廚，大神主OC推論家，靠東方原曲入坑。",
+          "summary": "最深的坑。一設廚，大神主OC推論家，靠東方原曲入坑。",
           "details": [
-            "遊戲只玩過紅妖永、地風星天，再來直接接錦上京了。",
-            "STG苦手，超喜歡但連Normal都沒辦法不接關過",
+            "打過紅妖永／地風星天，錦上京／紺珠傳／天空璋都有通關紀錄。",
+            "STG苦手但持續修行中，Normal 通關過紅魔鄉（靈夢A）與錦上京（接關 3 次）。",
             "主推赫卡緹亞（ヘカーティア・ラピスラズリ）",
-            "比較接近設定廚，未來想搞搞看同人創作。",
+            "比較接近設定廚，2026 年做了東方同人遊戲《東方靈萃壇》。",
             "有一隻 40cm 的八嘎超級大 Fumo。"
           ],
           "images": [
@@ -237,7 +246,7 @@
       "items": [
         {
           "name": "神魔之塔",
-          "summary": "雲玩家但會拚榜，喜歡蒐集與練奇怪隊伍。",
+          "summary": "一直罵但還是一直玩。雲玩家但會拚榜，喜歡蒐集與練奇怪隊伍。",
           "details": [
             "UID：849008640",
             "很雲，但會拚榜。",
@@ -270,7 +279,7 @@
           "summary": "退坑或半退坑但仍關注相關情報。",
           "details": [
             "公主連結：已退坑，僅關注日版與聲優情報。",
-            "BanG Dream：Ringing Bloom EX29 AP、R SP29 AP、HoH SP30 FC。",
+            "BanG Dream（只玩老邦）：Ringing Bloom EX29 AP、R SP29 AP、HoH SP30 FC。",
             "Project Sekai：真皆傳 1，最高 AP 31。"
           ]
         }
@@ -430,7 +439,7 @@
           "summary": "音遊常駐坑，下一個目標是桃將。",
           "details": [
             "ID: 7089744697662",
-            "Rating 15180、桃極持有。",
+            "Rating 15200、桃極持有。",
             "目標：下一張極牌、桃將。"
           ]
         }
@@ -438,6 +447,15 @@
     }
   ],
   "sideProjects": [
+    {
+      "name": "東方靈萃壇",
+      "description": "2026 年的東方同人放置養成遊戲，附 STG 小遊戲。",
+      "stack": [
+        "Game",
+        "Web"
+      ],
+      "href": "https://touhou.reisuidan.com"
+    },
     {
       "name": "MyGO 貼圖搜尋器",
       "description": "MyGO 貼圖的搜尋器與資料整理。",

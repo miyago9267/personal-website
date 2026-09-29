@@ -6,6 +6,11 @@ const clickCount = ref(0)
 const showQuote = ref(false)
 // 台詞一律保留日文原文，不翻譯
 const quotes = [
+  { text: '弾幕はパワーだぜ', source: '東方Project' },
+  { text: 'あたいったら最強ね！', source: '東方Project' },
+  { text: 'そーなのかー', source: '東方Project' },
+  { text: 'ゆっくりしていってね！！！', source: '東方Project' },
+  { text: 'Welcome♥Hell', source: '東方紺珠伝' },
   { text: 'エル・プサイ・コングルゥ', source: 'STEINS;GATE' },
   { text: 'これが…シュタインズ・ゲートの選択だよ。', source: 'STEINS;GATE' },
   { text: '俺は狂気のマッドサイエンティスト、鳳凰院凶真だ！', source: 'STEINS;GATE' },

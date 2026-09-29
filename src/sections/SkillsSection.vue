@@ -12,6 +12,7 @@ const lastClickTime = ref(0)
 const comboTimeout = ref<number | null>(null)
 
 const comboMessage = computed(() => {
+  if (clickCombo.value === 67) return '6... 7!'
   if (clickCombo.value >= 50) return '究極技能樹亂點人！'
   if (clickCombo.value >= 30) return '全能工程師！'
   if (clickCombo.value >= 20) return 'Full Stack Master!'
