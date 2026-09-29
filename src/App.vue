@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useUi } from './i18n'
 import { ref } from 'vue'
 import { useLoading } from './composables/useLoading'
 import { useTheme } from './composables/useTheme'
@@ -7,6 +8,7 @@ import { useKonamiCode } from './composables/useKonamiCode'
 import SiteHeader from './components/ui/SiteHeader.vue'
 import FloatingActions from './components/ui/FloatingActions.vue'
 import LoadingScreen from './components/ui/LoadingScreen.vue'
+import LocaleSuggestion from './components/ui/LocaleSuggestion.vue'
 import HeroSection from './sections/HeroSection.vue'
 import AboutSection from './sections/AboutSection.vue'
 import SkillsSection from './sections/SkillsSection.vue'
@@ -17,6 +19,7 @@ import SocialSection from './sections/SocialSection.vue'
 import ContactSection from './sections/ContactSection.vue'
 import FriendsSection from './sections/FriendsSection.vue'
 import FooterSection from './sections/FooterSection.vue'
+const ui = useUi()
 
 const { isLoading } = useLoading(2000, 4000)
 const mainRef = ref<HTMLElement | null>(null)
@@ -61,6 +64,7 @@ useKonamiCode(() => {
       <FooterSection />
     </main>
     <FloatingActions />
+    <LocaleSuggestion v-if="!isLoading" />
     
     <!-- 彩蛋: Konami Code 訊息 -->
     <Transition name="konami-fade">
@@ -69,9 +73,15 @@ useKonamiCode(() => {
         class="konami-message"
       >
         <div class="konami-content">
-          <p class="konami-title">成功解鎖隱藏成就！</p>
-          <p class="konami-subtitle">你找到了 Konami Code 彩蛋</p>
-          <p class="konami-hint">繼續探索，還有更多想不到的驚喜</p>
+          <p class="konami-title">
+            {{ ui.konami.title }}
+          </p>
+          <p class="konami-subtitle">
+            {{ ui.konami.subtitle }}
+          </p>
+          <p class="konami-hint">
+            {{ ui.konami.hint }}
+          </p>
         </div>
       </div>
     </Transition>

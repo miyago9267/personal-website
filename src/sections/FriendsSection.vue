@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import { useUi } from '../i18n'
 import { useProfile } from '../composables/useProfile'
 
 import SectionTitle from '../components/ui/SectionTitle.vue'
+const ui = useUi()
 const profile = useProfile()
 </script>
 
@@ -11,9 +13,9 @@ const profile = useProfile()
     class="py-4 md:py-8"
   >
     <SectionTitle
-      kicker="Friends"
-      title="友站快速連結"
-      subtitle="一些喜歡的網站或朋友的作品連結。"
+      :kicker="ui.friends.kicker"
+      :title="ui.friends.title"
+      :subtitle="ui.friends.subtitle"
     />
     <div class="my-8">
       <div
@@ -36,7 +38,7 @@ const profile = useProfile()
         v-else
         class="text-sm text-[var(--muted)]"
       >
-        尚未加入友站連結，之後會補上。
+        {{ ui.friends.empty }}
       </p>
     </div>
   </section>

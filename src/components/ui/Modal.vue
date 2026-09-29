@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useUi } from '../../i18n'
+const ui = useUi()
 interface ModalProps {
   title: string
   isOpen: boolean
@@ -30,7 +32,7 @@ const close = () => emit('close')
             type="button"
             @click="close"
           >
-            Close
+            {{ ui.modal.close }}
           </button>
         </div>
         <div class="mt-4">

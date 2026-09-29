@@ -1,8 +1,11 @@
 <script setup lang="ts">
+import { useUi } from '../../i18n'
 import { ref } from 'vue'
 import { useSite } from '../../composables/useSite'
 import { useDisclosure } from '../../composables/useDisclosure'
 import { useTheme } from '../../composables/useTheme'
+import LocaleSwitcher from './LocaleSwitcher.vue'
+const ui = useUi()
 
 const { navLinks } = useSite()
 const { isDark, toggleTheme } = useTheme('light')
@@ -37,8 +40,8 @@ const handleThemeToggle = () => {
     ></div>
     <div class="w-[min(1120px,92vw)] mx-auto py-4 flex items-center gap-4 justify-start">
       <div class="flex flex-col gap-1">
-        <span class="text-[11px] tracking-[0.4em] uppercase text-[var(--muted)]">MIYAGO</span>
-        <span class="text-[16px] font-semibold text-[var(--text)]">Personal Media</span>
+        <span class="text-[11px] tracking-[0.4em] uppercase text-[var(--muted)]">{{ ui.header.brandKicker }}</span>
+        <span class="text-[16px] font-semibold text-[var(--text)]">{{ ui.header.brandTitle }}</span>
       </div>
       <nav class="hidden lg:flex gap-5 text-[13px] text-[var(--muted)] overflow-x-auto pb-1 ml-auto">
         <a
@@ -48,14 +51,15 @@ const handleThemeToggle = () => {
           class="transition-colors hover:text-[var(--text)]"
           @click="closeNav"
         >
-          {{ item.label }}
+          {{ ui.nav[item.id as keyof typeof ui.nav] }}
         </a>
       </nav>
       <div class="flex items-center gap-2 ml-auto lg:ml-3">
+        <LocaleSwitcher />
         <button
           class="w-8 h-8 rounded-full bg-[var(--panel-bg)] text-[var(--muted)] flex items-center justify-center transition-colors shadow-[var(--card-shadow)] hover:text-[var(--text)] hover:bg-[var(--card-bg)]"
           type="button"
-          :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
+          :aria-label="isDark ? ui.header.toLight : ui.header.toDark"
           @click="handleThemeToggle"
         >
           <svg
@@ -115,7 +119,7 @@ const handleThemeToggle = () => {
         @click.stop
       >
         <div class="flex items-center justify-between pb-2">
-          <span class="text-[16px] font-semibold text-[var(--text)]">Menu</span>
+          <span class="text-[16px] font-semibold text-[var(--text)]">{{ ui.header.menu }}</span>
           <button
             class="w-8 h-8 rounded-full bg-[var(--panel-bg)] text-[var(--muted)] flex items-center justify-center transition-colors shadow-[var(--card-shadow)] hover:text-[var(--text)] hover:bg-[var(--card-bg)]"
             type="button"
@@ -131,7 +135,7 @@ const handleThemeToggle = () => {
           class="text-[var(--muted)] hover:text-[var(--text)] py-1"
           @click="closeNav"
         >
-          {{ item.label }}
+          {{ ui.nav[item.id as keyof typeof ui.nav] }}
         </a>
       </nav>
     </div>

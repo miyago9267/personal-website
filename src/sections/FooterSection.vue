@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import { useUi } from '../i18n'
 import { ref } from 'vue'
+const ui = useUi()
 
 // 彩蛋:點擊 Footer 顯示隱藏台詞
 const clickCount = ref(0)
@@ -61,10 +63,16 @@ const handleFooterClick = () => {
     @click="handleFooterClick"
   >
     <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-      <p>Built by Miyago9267 © 2026</p>
-      <p>Designing resilient systems & memorable stories.</p>
+      <p>{{ ui.footer.builtBy }}</p>
+      <p>{{ ui.footer.motto }}</p>
     </div>
-    
+    <p
+      v-if="ui.footer.translationNote"
+      class="mt-2 text-xs text-center md:text-right opacity-80"
+    >
+      {{ ui.footer.translationNote }}
+    </p>
+
     <!-- 彩蛋:隱藏台詞 -->
     <Transition name="quote-fade">
       <div

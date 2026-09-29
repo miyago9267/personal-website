@@ -1,19 +1,12 @@
 <script setup lang="ts">
+import { useUi } from '../i18n'
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useProfile } from '../composables/useProfile'
+const ui = useUi()
 const profile = useProfile()
 
 // 彩蛋:職業輪播
-const roles = [
-  'MUGer',
-  'Writer',
-  'Programmer',
-  '見習魔法使',
-  'SRE Engineer',
-  '音遊玩家',
-  'Full Stack Dev',
-  '幻想鄉住民'
-]
+const roles = ui.hero.roles
 const currentRoleIndex = ref(0)
 let roleInterval: number | null = null
 
@@ -39,7 +32,7 @@ onUnmounted(() => {
       <p
         class="text-[1.25rem] md:text-[4.5rem] lt-sm:text-[clamp(18px,6.6vw,30px)] tracking-[0.02em] lt-sm:tracking-[-0.015em] font-['JetBrains_Mono'] text-[var(--hero-strong)] whitespace-nowrap inline-block max-w-full my-4"
       >
-        Hello World, Miyago here
+        {{ ui.hero.greeting }}
       </p>
       <p class="text-[1.125rem] md:text-[2rem] lt-sm:text-[clamp(18px,5vw,24px)] font-['JetBrains_Mono'] text-[var(--hero-soft)] my-2">
         <Transition name="role-fade" mode="out-in">
@@ -53,7 +46,7 @@ onUnmounted(() => {
     <span
       class="relative z-10 mt-6 text-[12px] tracking-[0.2em] uppercase text-[var(--muted)] lt-sm:mt-4"
     >
-      Scroll ↓
+      {{ ui.hero.scroll }}
     </span>
   </section>
 </template>

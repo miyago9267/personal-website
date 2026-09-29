@@ -1,8 +1,10 @@
 <script setup lang="ts">
+import { format, useUi } from '../i18n'
 import { ref } from 'vue'
 import { useProfile } from '../composables/useProfile'
 
 import SectionTitle from '../components/ui/SectionTitle.vue'
+const ui = useUi()
 const profile = useProfile()
 
 // 添加摺疊功能
@@ -25,9 +27,9 @@ const isExpanded = (title: string) => expandedGroups.value.has(title)
     class="py-4 md:py-6"
   >
     <SectionTitle
-      kicker="Experience"
-      title="學經歷"
-      subtitle="各個領域的累積，串成一條命運石之門選擇的世界線。"
+      :kicker="ui.experience.kicker"
+      :title="ui.experience.title"
+      :subtitle="ui.experience.subtitle"
     />
 
     <!-- 緊湊的時間軸式佈局 -->
@@ -45,7 +47,7 @@ const isExpanded = (title: string) => expandedGroups.value.has(title)
           <button
             class="expand-btn"
             :class="{ 'is-expanded': isExpanded(group.title) }"
-            aria-label="展開/收合"
+            :aria-label="ui.experience.toggle"
           >
             <svg
               width="16"
@@ -91,7 +93,7 @@ const isExpanded = (title: string) => expandedGroups.value.has(title)
 
         <!-- 彩蛋：hover 時顯示項目數量 -->
         <div class="card-footer">
-          <span class="item-count">{{ group.entries.reduce((acc, e) => acc + e.items.length, 0) }} 項成就</span>
+          <span class="item-count">{{ format(ui.experience.itemCount, { n: group.entries.reduce((acc, e) => acc + e.items.length, 0) }) }}</span>
         </div>
       </article>
     </div>

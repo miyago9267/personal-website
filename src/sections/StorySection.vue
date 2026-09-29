@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import { useUi } from '../i18n'
 import { useProfile } from '../composables/useProfile'
 
 import SectionTitle from '../components/ui/SectionTitle.vue'
+const ui = useUi()
 const profile = useProfile()
 </script>
 
@@ -13,8 +15,8 @@ const profile = useProfile()
     <div class="grid gap-10 md:grid-cols-[1.1fr_0.9fr] items-start">
       <div class="flex flex-col gap-6">
         <SectionTitle
-          kicker="Story"
-          title="我的個人故事與軌跡"
+          :kicker="ui.story.kicker"
+          :title="ui.story.title"
         />
         <div class="flex flex-col gap-4 text-base md:text-lg text-[var(--muted)] leading-relaxed">
           <p
@@ -28,7 +30,7 @@ const profile = useProfile()
       <div class="grid gap-4 md:mt-16">
         <div class="card-surface rounded-[20px] p-6 bg-[var(--card-bg)] shadow-[var(--card-shadow)]">
           <p class="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">
-            Identity
+            {{ ui.story.identity }}
           </p>
           <p class="mt-3 text-lg text-[var(--text)]">
             {{ profile.nickname }}
@@ -39,7 +41,7 @@ const profile = useProfile()
         </div>
         <div class="card-surface rounded-[20px] p-6 bg-[var(--card-bg)] shadow-[var(--card-shadow)]">
           <p class="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">
-            Current Focus
+            {{ ui.story.focus }}
           </p>
           <ul class="mt-3 grid gap-2 text-[var(--text)]/80">
             <li

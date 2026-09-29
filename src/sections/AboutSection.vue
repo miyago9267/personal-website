@@ -1,14 +1,16 @@
 <script setup lang="ts">
+import { useUi } from '../i18n'
 import { ref } from 'vue'
 import { useProfile } from '../composables/useProfile'
 
 import SectionTitle from '../components/ui/SectionTitle.vue'
 import Tag from '../components/ui/Tag.vue'
+const ui = useUi()
 const profile = useProfile()
 
 // 彩蛋:雙擊頭像顯示隱藏訊息
 const showSecret = ref(false)
-const secretMessage = '其實我是住在幻想鄉的見習魔法使'
+const secretMessage = ui.about.secret
 
 const handleAvatarDblClick = () => {
   showSecret.value = true
@@ -26,8 +28,8 @@ const handleAvatarDblClick = () => {
     <div class="grid gap-10 md:grid-cols-[0.9fr_1.1fr] items-center">
       <div class="flex flex-col gap-6 md:col-start-2 md:row-start-1">
         <SectionTitle
-          kicker="About"
-          title="腳踏文學和理學的怪人"
+          :kicker="ui.about.kicker"
+          :title="ui.about.title"
         />
       </div>
 

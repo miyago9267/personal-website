@@ -1,3 +1,3 @@
-import profile from '../data/profile.json'
+import { useProfileData } from '../i18n'
 
-export const useProfile = () => profile
+export const useProfile = () => useProfileData()

@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import { useUi } from '../i18n'
 import { ref, computed } from 'vue'
 import { useProfile } from '../composables/useProfile'
 
 import SectionTitle from '../components/ui/SectionTitle.vue'
 import Tag from '../components/ui/Tag.vue'
+const ui = useUi()
 const profile = useProfile()
 
 // 彩蛋：技能點擊連擊計數器
@@ -13,11 +15,11 @@ const comboTimeout = ref<number | null>(null)
 
 const comboMessage = computed(() => {
   if (clickCombo.value === 67) return '6... 7!'
-  if (clickCombo.value >= 50) return '究極技能樹亂點人！'
-  if (clickCombo.value >= 30) return '全能工程師！'
-  if (clickCombo.value >= 20) return 'Full Stack Master!'
-  if (clickCombo.value >= 10) return '技能收集家'
-  if (clickCombo.value >= 5) return 'Combo!'
+  if (clickCombo.value >= 50) return ui.skills.comboMessages.c50
+  if (clickCombo.value >= 30) return ui.skills.comboMessages.c30
+  if (clickCombo.value >= 20) return ui.skills.comboMessages.c20
+  if (clickCombo.value >= 10) return ui.skills.comboMessages.c10
+  if (clickCombo.value >= 5) return ui.skills.comboMessages.c5
   return ''
 })
 
@@ -50,9 +52,9 @@ const handleSkillClick = () => {
     class="py-4 md:py-8"
   >
     <SectionTitle
-      kicker="Skills"
-      title="技術棧"
-      subtitle="從系統底層到使用者介面，從演算法到 AI 應用。"
+      :kicker="ui.skills.kicker"
+      :title="ui.skills.title"
+      :subtitle="ui.skills.subtitle"
     />
 
     <!-- 彩蛋：連擊計數器顯示 -->
@@ -61,7 +63,7 @@ const handleSkillClick = () => {
         v-if="clickCombo > 0"
         class="combo-display"
       >
-        <span class="combo-count">{{ clickCombo }} Combo</span>
+        <span class="combo-count">{{ clickCombo }} {{ ui.skills.combo }}</span>
         <span
           v-if="comboMessage"
           class="combo-message"

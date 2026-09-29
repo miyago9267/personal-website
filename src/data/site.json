@@ -1,36 +1,12 @@
 {
   "navLinks": [
-    {
-      "label": "Story",
-      "href": "#story"
-    },
-    {
-      "label": "About",
-      "href": "#about"
-    },
-    {
-      "label": "Experience",
-      "href": "#experience"
-    },
-    {
-      "label": "Fandom",
-      "href": "#fandoms"
-    },
-    {
-      "label": "Projects",
-      "href": "#projects"
-    },
-    {
-      "label": "Social",
-      "href": "#social"
-    },
-    {
-      "label": "Friends",
-      "href": "#friends"
-    },
-    {
-      "label": "Blog",
-      "href": "/blog"
-    }
+    { "id": "story", "href": "#story" },
+    { "id": "about", "href": "#about" },
+    { "id": "experience", "href": "#experience" },
+    { "id": "fandoms", "href": "#fandoms" },
+    { "id": "projects", "href": "#projects" },
+    { "id": "social", "href": "#social" },
+    { "id": "friends", "href": "#friends" },
+    { "id": "blog", "href": "/blog" }
   ]
 }

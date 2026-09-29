@@ -1,8 +1,10 @@
 <script setup lang="ts">
+import { useUi } from '../i18n'
 import { useProfile } from '../composables/useProfile'
 
 import SectionTitle from '../components/ui/SectionTitle.vue'
 import Tag from '../components/ui/Tag.vue'
+const ui = useUi()
 const profile = useProfile()
 </script>
 
@@ -12,9 +14,9 @@ const profile = useProfile()
     class="py-4 md:py-8"
   >
     <SectionTitle
-      kicker="Side Projects"
-      title="Side Projects"
-      subtitle="把靈機一動的鬼點子變成看得見的現實。"
+      :kicker="ui.projects.kicker"
+      :title="ui.projects.title"
+      :subtitle="ui.projects.subtitle"
     />
     
     <div class="my-8 grid gap-6 md:grid-cols-3">
@@ -45,7 +47,7 @@ const profile = useProfile()
           rel="noreferrer"
           class="text-sm text-[var(--muted)] hover:text-[var(--text)] transition"
         >
-          View project →
+          {{ ui.projects.view }}
         </a>
       </article>
     </div>

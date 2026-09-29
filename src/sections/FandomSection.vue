@@ -1,10 +1,12 @@
 <script setup lang="ts">
+import { useUi } from '../i18n'
 import { ref } from 'vue'
 import { useProfile } from '../composables/useProfile'
 
 import SectionTitle from '../components/ui/SectionTitle.vue'
 import Modal from '../components/ui/Modal.vue'
 import { useGalleryModal } from '../composables/useGalleryModal'
+const ui = useUi()
 
 const profile = useProfile()
 type FandomItem = {
@@ -15,6 +17,15 @@ type FandomItem = {
 }
 
 const { activeItem, activeIndex, hasImages, open, close, prev, next } = useGalleryModal<FandomItem>()
+
+// details 中 '---' 之後的行是作品清單（以「、」分隔），之前的是一般說明
+const LIST_MARKER = '---'
+const splitDetails = (details: string[]) => {
+  const at = details.indexOf(LIST_MARKER)
+  const text = (at < 0 ? details : details.slice(0, at)).filter(Boolean)
+  const list = at < 0 ? [] : details.slice(at + 1).flatMap((line) => line.split('、')).filter(Boolean)
+  return { text, list }
+}
 
 // 彩蛋:音遊連擊效果
 const clickTimes = ref<number[]>([])
@@ -45,9 +56,9 @@ const handleCardClick = () => {
     class="py-4 md:py-8"
   >
     <SectionTitle
-      kicker="Fandom"
-      title="坑單"
-      subtitle="我在活網的足跡裡所銘刻的光陰。"
+      :kicker="ui.fandom.kicker"
+      :title="ui.fandom.title"
+      :subtitle="ui.fandom.subtitle"
     />
     <div class="my-8 grid gap-6 md:grid-cols-3">
       <div
@@ -71,7 +82,7 @@ const handleCardClick = () => {
               type="button"
               @click="open(item)"
             >
-              查看
+              {{ ui.fandom.view }}
             </button>
           </div>
         </div>
@@ -88,35 +99,33 @@ const handleCardClick = () => {
         {{ activeItem.summary }}
       </p>
       
-      <!-- 分離一般說明和列表項目 -->
+      <!-- 分離一般說明和作品清單 -->
       <template v-if="activeItem.details">
-        <!-- 一般說明文字 -->
         <ul class="mt-4 grid gap-2 text-sm text-[var(--muted)]">
           <li
-            v-for="detail in activeItem.details.filter(d => d && !d.includes('、') && d !== '部分作品列表:')"
+            v-for="detail in splitDetails(activeItem.details).text"
             :key="detail"
           >
             {{ detail }}
           </li>
         </ul>
-        
-        <!-- 可滾動的作品列表區塊 -->
+
         <div
-          v-if="activeItem.details.some(d => d.includes('、'))"
+          v-if="splitDetails(activeItem.details).list.length"
           class="anime-list-container"
         >
-          <div class="anime-list-header">部分作品列表</div>
+          <div class="anime-list-header">
+            {{ ui.fandom.listHeader }}
+          </div>
           <div class="anime-list-scroll">
             <div class="anime-list-grid">
-              <template v-for="detail in activeItem.details.filter(d => d.includes('、'))" :key="detail">
-                <span
-                  v-for="anime in detail.split('、')"
-                  :key="anime"
-                  class="anime-tag"
-                >
-                  {{ anime }}
-                </span>
-              </template>
+              <span
+                v-for="anime in splitDetails(activeItem.details).list"
+                :key="anime"
+                class="anime-tag"
+              >
+                {{ anime }}
+              </span>
             </div>
           </div>
         </div>

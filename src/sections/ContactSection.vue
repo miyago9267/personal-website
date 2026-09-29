@@ -1,8 +1,10 @@
 <script setup lang="ts">
+import { useUi } from '../i18n'
 import { useProfile } from '../composables/useProfile'
 
 import SectionTitle from '../components/ui/SectionTitle.vue'
 import ButtonLink from '../components/ui/ButtonLink.vue'
+const ui = useUi()
 const profile = useProfile()
 </script>
 
@@ -13,7 +15,7 @@ const profile = useProfile()
   >
     <div class="card-surface rounded-[24px] p-8 md:p-12 bg-[var(--card-bg)] shadow-[var(--card-shadow)]">
       <SectionTitle
-        kicker="Contact"
+        :kicker="ui.contact.kicker"
         :title="profile.contact.title"
         :subtitle="profile.contact.body"
       />

@@ -10,7 +10,10 @@
     "optimize": "bunx --bun vite optimize",
     "lint": "bunx --bun eslint src",
     "lint:fix": "bunx --bun eslint src --fix",
-    "typecheck": "bunx --bun vue-tsc --noEmit"
+    "typecheck": "bunx --bun vue-tsc --noEmit",
+    "test": "bun test",
+    "check:locales": "bun scripts/check-locales.ts",
+    "gen:zh-cn": "bun scripts/gen-zh-cn.ts"
   },
   "dependencies": {
     "unocss": "^66.10.5",
@@ -22,6 +25,7 @@
     "eslint": "^10.11.0",
     "eslint-plugin-vue": "^10.11.1",
     "globals": "^17.12.0",
+    "opencc-js": "^1.4.2",
     "typescript": "~6.0.3",
     "typescript-eslint": "^8.71.0",
     "vite": "^8.3.1",

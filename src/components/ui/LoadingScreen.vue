@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import { useUi } from '../../i18n'
 import { ref, onMounted, onUnmounted } from 'vue'
+const ui = useUi()
 
 const dots = ref('...')
 let timer: ReturnType<typeof setInterval> | undefined
@@ -30,7 +32,7 @@ onUnmounted(() => {
         />
       </div>
       <p class="text-[13px] text-[var(--muted)] flex justify-center items-center">
-        <span>少女祈禱中</span>
+        <span>{{ ui.loading }}</span>
         <span class="w-6 text-left">{{ dots }}</span>
       </p>
     </div>
