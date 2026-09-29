@@ -543,6 +543,11 @@
       "name": "CabLate",
       "description": "CabLate 的個人站，AI 應用、Agent 與產品實作",
       "href": "https://cablate.com/"
+    },
+    {
+      "name": "Nyanako",
+      "description": "Nyanako 的 GitHub，SRE 夥伴",
+      "href": "https://github.com/Nanako0129"
     }
   ]
 }
