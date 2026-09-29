@@ -4,82 +4,36 @@ import { ref } from 'vue'
 // 彩蛋:點擊 Footer 顯示隱藏台詞
 const clickCount = ref(0)
 const showQuote = ref(false)
+// 台詞一律保留日文原文，不翻譯
 const quotes = [
-  // 命運石之門
-  '「無論在哪個世界線,我都會找到你。」',
-  '「El Psy Kongroo」',
-  '「這就是命運石之門的選擇。」',
-  '「我是狂氣的瘋狂科學家!」',
-  '「改變過去,就能改變未來。」',
-  
-  // 魔法少女小圓
-  '「成為魔法少女,簽訂契約吧!」',
-  '「已經沒有什麼好害怕的了。」',
-  '「奇蹟和魔法都是存在的!」',
-  '「不要放棄希望。」',
-  '「我會一直守護著你。」',
-  
-  // JOJO
-  '「人類的讚歌是勇氣的讚歌!」',
-  '「你的下一句話是...」',
-  '「但是我拒絕！」',
-  '「這是我最後的波紋了!」',
-  
-  // 鋼之鍊金術師
-  '「等價交換,這是鍊金術的原則。」',
-  '「站起來,向前走!」',
-  '「即使如此,我也要前進。」',
-  '「一個無法保護任何人。」',
-  
-  // 鏈鋸人
-  '「好耶!」',
-  '「我就是鍊鋸人!」',
-  '「我心已被蕾塞奪走，此生或許再無悲喜。」',
-  
-  // Fate系列
-  '「你就是我的Master嗎?」',
-  '「人被殺，就會死。」',
-  '「正義的夥伴。」',
-  
-  // 超砲
-  '「你指尖躍動的電光，是我此生不變的信仰!」',
-  '「不幸啊!」',
-  
-  // 無職轉生
-  '「這次一定要認真活下去。」',
-  
-  // 輝夜姬想讓人告白
-  '「可愛即是正義!」',
-  '「愛就是戰爭!」',
-  
-  // 光之美少女系列
-  '「絕不放棄!」',
-  '「大家的力量!」',
-  
-  // 美少女戰士
-  '「我要代替月亮懲罰你!」',
-  '「相信愛與正義!」',
-  
-  // 聖鬥士星矢
-  '「燃燒吧!我的小宇宙!」',
-  
-  // BanG Dream
-  '「Kirakira Doki Doki!」',
-  '「一起創造最棒的音樂!」',
-  '「這就是我們的羈絆!」',
-  '「一輩子跟我一起MyGO嗎!」',
-  
-  // LoveLive
-  '「大家一起實現夢想!」',
-  '「µ,s Music Start!」',
-  '「我們的歌聲能傳達給大家!」',
-  
-  // 通用
-  '「不要停下來啊!」',
-  '「相信那個相信你的我。」',
-  '「這就是我的道路!」'
+  { text: 'エル・プサイ・コングルゥ', source: 'STEINS;GATE' },
+  { text: 'これが…シュタインズ・ゲートの選択だよ。', source: 'STEINS;GATE' },
+  { text: '俺は狂気のマッドサイエンティスト、鳳凰院凶真だ！', source: 'STEINS;GATE' },
+  { text: '僕と契約して、魔法少女になってよ！', source: '魔法少女まどか☆マギカ' },
+  { text: 'もう何も恐くない', source: '魔法少女まどか☆マギカ' },
+  { text: '奇跡も、魔法も、あるんだよ', source: '魔法少女まどか☆マギカ' },
+  { text: '人間讃歌は「勇気」の讃歌ッ！！', source: 'ジョジョの奇妙な冒険' },
+  { text: 'だが断る', source: 'ジョジョの奇妙な冒険' },
+  { text: 'お前の次のセリフは「〇〇」という！', source: 'ジョジョの奇妙な冒険' },
+  { text: '人は何かの犠牲なしに何も得ることはできない', source: '鋼の錬金術師' },
+  { text: '立って歩け　前へ進め', source: '鋼の錬金術師' },
+  { text: '問おう。貴方が私のマスターか', source: 'Fate/stay night' },
+  { text: '子供の頃、僕は正義の味方に憧れてた', source: 'Fate/stay night' },
+  { text: '不幸だーっ！', source: 'とある魔術の禁書目録' },
+  { text: '異世界行ったら本気だす', source: '無職転生' },
+  { text: 'お可愛いこと', source: 'かぐや様は告らせたい' },
+  { text: '恋愛は告白した方が負けなのである！', source: 'かぐや様は告らせたい' },
+  { text: 'ぶっちゃけありえない！', source: 'ふたりはプリキュア' },
+  { text: '月に代わっておしおきよ！', source: '美少女戦士セーラームーン' },
+  { text: '燃えろ！俺の小宇宙（コスモ）！', source: '聖闘士星矢' },
+  { text: 'キラキラドキドキ！', source: 'BanG Dream!' },
+  { text: '一生、バンドしてくれる？', source: 'BanG Dream! It\'s MyGO!!!!!' },
+  { text: 'μ\'s ミュージック、スタート！', source: 'ラブライブ！' },
+  { text: '止まるんじゃねぇぞ…', source: '機動戦士ガンダム 鉄血のオルフェンズ' },
+  { text: 'お前を信じる俺を信じろ！', source: '天元突破グレンラガン' },
+  { text: 'それがオレの忍道だ', source: 'NARUTO' },
 ]
-const currentQuote = ref('')
+const currentQuote = ref(quotes[0])
 
 const handleFooterClick = () => {
   clickCount.value++
@@ -112,7 +66,8 @@ const handleFooterClick = () => {
         v-if="showQuote"
         class="quote-display"
       >
-        {{ currentQuote }}
+        「{{ currentQuote.text }}」
+        <span class="quote-source">— {{ currentQuote.source }}</span>
       </div>
     </Transition>
   </footer>
@@ -130,7 +85,7 @@ footer:hover {
 /* 彩蛋:台詞顯示 */
 .quote-display {
   position: absolute;
-  top: -60px;
+  bottom: calc(100% - 1rem);
   left: 50%;
   transform: translateX(-50%);
   background: linear-gradient(
@@ -143,9 +98,18 @@ footer:hover {
   border-radius: 12px;
   font-size: 0.875rem;
   font-weight: 500;
-  white-space: nowrap;
+  width: max-content;
+  max-width: min(90vw, 36rem);
+  text-align: center;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   animation: quote-bounce 0.6s ease-out;
+}
+
+.quote-source {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  opacity: 0.8;
 }
 
 @keyframes quote-bounce {
