@@ -1,0 +1,69 @@
+{
+  "header": {
+    "language": "Changer de langue"
+  },
+  "nav": {
+    "fandoms": "Fandoms"
+  },
+  "loading": "En pleine prière (少女祈禱中)",
+  "hero": {
+    "roles": [
+      "MUGer",
+      "Écrivain",
+      "Programmeur",
+      "Apprenti magicien",
+      "Ingénieur SRE",
+      "Joueur de jeux de rythme",
+      "Développeur Full Stack",
+      "Résident de Gensokyo"
+    ]
+  },
+  "about": {
+    "title": "Un drôle d'oiseau, un pied dans les lettres et l'autre dans les sciences",
+    "secret": "En vrai, je suis un apprenti magicien qui vit à Gensokyo."
+  },
+  "story": {
+    "title": "Mon histoire et le chemin parcouru"
+  },
+  "skills": {
+    "title": "Stack technique",
+    "subtitle": "Des entrailles du système à l'interface utilisateur, des algorithmes aux applications d'IA.",
+    "comboMessages": {
+      "c50": "Arbre de compétences hors de contrôle !",
+      "c30": "Touche-à-tout !",
+      "c10": "Collectionneur de compétences"
+    }
+  },
+  "experience": {
+    "title": "Parcours",
+    "subtitle": "Des expériences de tous horizons, enfilées sur la ligne temporelle choisie par Steins;Gate.",
+    "toggle": "Déplier / replier",
+    "itemCount": "{n} réalisations"
+  },
+  "fandom": {
+    "title": "Fandoms",
+    "subtitle": "Le temps gravé dans mes traces sur internet.",
+    "view": "Voir",
+    "listHeader": "Quelques titres"
+  },
+  "projects": {
+    "subtitle": "Transformer des idées lancées sur un coup de tête en quelque chose de concret."
+  },
+  "social": {
+    "title": "Me retrouver en ligne",
+    "subtitle": "Envie d'en voir plus sur mon quotidien et mon travail, ou juste de discuter ? C'est ici que ça se passe."
+  },
+  "friends": {
+    "title": "Liens d'amis",
+    "subtitle": "Des sites et des créations d'amis que j'aime bien.",
+    "empty": "Pas encore de liens d'amis. Bientôt."
+  },
+  "konami": {
+    "title": "Succès caché débloqué !",
+    "subtitle": "Tu as trouvé l'easter egg du Konami Code.",
+    "hint": "Continue d'explorer. Il reste d'autres surprises à découvrir."
+  },
+  "footer": {
+    "translationNote": "Cette page a été traduite avec l'aide d'une machine."
+  }
+}

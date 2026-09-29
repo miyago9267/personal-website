@@ -1,0 +1,543 @@
+{
+  "name": "水源宫语",
+  "nickname": "宫语 / Miyago",
+  "roles": [
+    "SRE Engineer",
+    "Writer",
+    "Programmer",
+    "MUGer"
+  ],
+  "tagline": "把好奇变成作品，把作品化为故事。",
+  "location": "Taiwan",
+  "avatarUrl": "https://drive.miyago9267.com/d/home/miyago/Pictures/pic/miyago_avatar.png",
+  "aboutCover": "https://drive.miyago9267.com/d/home/miyago/Local/pictures/pic/91187712_p0_master1200.jpg",
+  "bio": [
+    "一个住在幻想乡森林中的见习魔法使，在外界作为SRE工程师，同时正在进修大学学历。究极技能树乱点人，喜欢乱学杂七杂八的东西，几乎万能但不敢说自己什么都厉害。",
+    "经常研究一项新事物就会开始忘我w，然后莫名奇妙陷入一段新的冒险。喜欢哲学思考、科学研究、玩玩文学，偶尔写写小程序。最近在学习DTM音乐制作，希望有一天能在音游上看到自己的作品！"
+  ],
+  "story": [
+    "我是 Miyago，把工程、创作与社群文化混在一起的人。",
+    "我相信个人品牌不只是一个形象，而是你做过的选择、走过的路、以及在网络世界留下的痕迹。",
+    "这里会记录我的学经历、ACG 与网络文化的坑单、Side Project 与社群出没点。"
+  ],
+  "highlights": [
+    {
+      "title": "现任职",
+      "value": "SRE / Infra"
+    },
+    {
+      "title": "关键字",
+      "value": "ICT · MUG"
+    },
+    {
+      "title": "专注于",
+      "value": "叙事 x 共鸣"
+    }
+  ],
+  "socials": [
+    {
+      "name": "GitHub",
+      "href": "https://github.com/miyago9267"
+    },
+    {
+      "name": "Facebook",
+      "href": "https://facebook.com/miyago9267"
+    },
+    {
+      "name": "Discord",
+      "href": "https://discordapp.com/users/469168464955703318"
+    }
+  ],
+  "skills": [
+    {
+      "category": "SRE & DevOps & Infra",
+      "description": "系统可靠性工程、自动化与基础设施",
+      "items": [
+        "Linux/Unix",
+        "Docker",
+        "Kubernetes",
+        "CI/CD",
+        "GCP",
+        "Azure",
+        "Nginx"
+      ]
+    },
+    {
+      "category": "Backend",
+      "description": "后端开发与 API 设计",
+      "items": [
+        "Go",
+        "Python",
+        "Node.js"
+      ]
+    },
+    {
+      "category": "Frontend",
+      "description": "前端开发与用户界面",
+      "items": [
+        "Vue 3",
+        "Nuxt 4",
+        "TypeScript",
+        "UnoCSS"
+      ]
+    },
+    {
+      "category": "Database",
+      "description": "数据库设计与管理",
+      "items": [
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB",
+        "Git"
+      ]
+    },
+    {
+      "category": "AI & ML",
+      "description": "人工智能与机器学习",
+      "items": [
+        "PyTorch",
+        "RAG",
+        "Prompt Engineering",
+        "Fine-tuning",
+        "OpenAI SDK",
+        "Openclaw"
+      ]
+    },
+    {
+      "category": "Others",
+      "description": "其他专业技能",
+      "items": [
+        "Arduino/ESP32",
+        "Flutter",
+        "C/C++",
+        "资安基础"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "title": "信息技术相关",
+      "entries": [
+        {
+          "year": "2019",
+          "items": [
+            "凤山高中 110th 电脑资讯社社长"
+          ]
+        },
+        {
+          "year": "2022",
+          "items": [
+            "铭传大学开源资讯社 4th 学术 / GDSC core team",
+            "2022 PUPC 铜牌",
+            "2022 ICPC 参赛"
+          ]
+        },
+        {
+          "year": "2023",
+          "items": [
+            "2023 PUPC 金牌",
+            "铭传大学开源资讯社 5th 客座顾问"
+          ]
+        },
+        {
+          "year": "2025",
+          "items": [
+            "独立开发MyGO搜索器",
+            "RiceCall语音共同开发者暨后台PM"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "游戏相关",
+      "entries": [
+        {
+          "year": "音乐游戏",
+          "items": [
+            "Bang Dream（老邦）28 以下全 AP 确定，最高 AP 29，最高 FC 30",
+            "世界计划 真皆传 (AP 数 35，最高 AP 31，最高 FC 32)",
+            "Arcaea 摘星 (Ptt 12.538)",
+            "Maimai Rating 15200，桃极持有"
+          ]
+        },
+        {
+          "year": "东方 Project",
+          "items": [
+            "东方锦上京 Easy 无接关、Normal 接关 3 次通关（月形石灵梦）",
+            "东方绀珠传 Easy 完美无缺模式通关",
+            "东方红魔乡 Normal 通关（灵梦 A）",
+            "东方星莲船、东方天空璋 Easy 通关"
+          ]
+        },
+        {
+          "year": "其他",
+          "items": [
+            "Minecraft 随机种子码SR纪录 - 47分12秒93",
+            "恐鬼症15倍天启挑战 - 金牌完美调查",
+            "东方LNN - 一个都没有（写爽的）"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "其他学经历",
+      "entries": [
+        {
+          "year": "粉丝专页",
+          "items": [
+            "佩可美食协会 - 花子编",
+            "法兰西斯莫来管 - 盆景植物编"
+          ]
+        },
+        {
+          "year": "其他",
+          "items": [
+            "我有女友（我女友叫我写的）"
+          ]
+        }
+      ]
+    }
+  ],
+  "fandoms": [
+    {
+      "title": "深坑",
+      "items": [
+        {
+          "name": "DDLC 系列",
+          "summary": "深坑，会制作／游玩相关模组与二创。",
+          "details": [
+            "会制作与游玩 DDLC 相关模组与游戏。",
+            "每年会进行生日贺图的绘制。",
+            "你会在我版上发现大量 Monika。"
+          ],
+          "images": [
+            "https://drive.miyago9267.com/d/home/miyago/Pictures/link_gen/2024_11_14/Monika_Birthday_2020.jpg",
+            "https://drive.miyago9267.com/d/home/miyago/Pictures/link_gen/2024_11_14/Monika_Birthday_2021.jpg",
+            "https://drive.miyago9267.com/d/home/miyago/Pictures/link_gen/2024_11_14/Monika_Birthday_2023.png",
+            "https://drive.miyago9267.com/d/home/miyago/Pictures/link_gen/2024_11_14/Monika_Birthday_2024.jpeg"
+          ]
+        },
+        {
+          "name": "东方",
+          "summary": "最深的坑。一设厨，大神主OC推论家，靠东方原曲入坑。",
+          "details": [
+            "打过红妖永／地风星天，锦上京／绀珠传／天空璋都有通关纪录。",
+            "STG苦手但持续修行中，Normal 通关过红魔乡（灵梦A）与锦上京（接关 3 次）。",
+            "主推赫卡缇亚（ヘカーティア・ラピスラズリ）",
+            "比较接近设定厨，2026 年做了东方同人游戏《东方灵萃坛》。",
+            "有一只 40cm 的八嘎超级大 Fumo。"
+          ],
+          "images": [
+            "https://drive.miyago9267.com/d/home/miyago/Pictures/link_gen/2024_11_14/Cirno_Fumo.jpg"
+          ]
+        },
+        {
+          "name": "电子音乐",
+          "summary": "不限于同人或商业作品，也不限欧美或日式，喜欢研究与曲风相关的内容。",
+          "details": [
+            "主推：Hardcore Tano*C",
+            "偏好风格：硬派、东方系曲目、V家曲"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "手机游戏",
+      "items": [
+        {
+          "name": "神魔之塔",
+          "summary": "一直骂但还是一直玩。云玩家但会拼榜，喜欢搜集与练奇怪队伍。",
+          "details": [
+            "UID：849008640",
+            "很云，但会拼榜。",
+            "喜欢练奇怪的复制人或系列队伍。"
+          ],
+          "images": [
+            "https://drive.miyago9267.com/d/home/miyago/Pictures/link_gen/about/Screenshot_20250925-123543_TOS.jpg",
+            "https://drive.miyago9267.com/d/home/miyago/Pictures/link_gen/Screenshot_20240319-152329_TOS.jpg",
+            "https://drive.miyago9267.com/d/home/miyago/Pictures/link_gen/Screenshot_20240319-152349_TOS.jpg",
+            "https://drive.miyago9267.com/d/home/miyago/Pictures/link_gen/about/Screenshot_20250925-123922_TOS.jpg",
+            "https://drive.miyago9267.com/d/home/miyago/Pictures/link_gen/about/Screenshot_20250925-124047_TOS.jpg",
+            "https://drive.miyago9267.com/d/home/miyago/Pictures/link_gen/about/Screenshot_20250925-124100_TOS.jpg",
+            "https://drive.miyago9267.com/d/home/miyago/Pictures/link_gen/about/Screenshot_20250925-124111_TOS.jpg"
+          ]
+        },
+        {
+          "name": "Arcaea",
+          "summary": "音游主坑之一，帐号活跃。",
+          "details": [
+            "Name: Miyago9267",
+            "ID: 737 694 096",
+            "世界第三位洞烛获得者。"
+          ],
+          "images": [
+            "https://drive.miyago9267.com/d/home/miyago/Pictures/link_gen/2024_11_14/Arcaea_info6.0.png"
+          ]
+        },
+        {
+          "name": "杂坑",
+          "summary": "退坑或半退坑但仍关注相关情报。",
+          "details": [
+            "公主连结：已退坑，仅关注日版与声优情报。",
+            "BanG Dream（只玩老邦）：Ringing Bloom EX29 AP、R SP29 AP、HoH SP30 FC。",
+            "Project Sekai：真皆传 1，最高 AP 31。"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "电脑游戏",
+      "items": [
+        {
+          "name": "游戏平台",
+          "summary": "常用的游戏平台帐号。",
+          "details": [
+            "Steam: 899348396",
+            "Origin: KyCoEMark",
+            "Uplay: Miyago9267"
+          ],
+          "images": [
+            "https://drive.miyago9267.com/d/home/miyago/Pictures/link_gen/Screenshot_2024-03-19%2015.32.25_PPc6Dn.png"
+          ]
+        },
+        {
+          "name": "Minecraft",
+          "summary": "从 beta 1.4 一路玩到现在，喜欢研究底层与生电。",
+          "details": [
+            "beta 1.4 ~ now。",
+            "研究指令、Datapack、插件、模组、生电及底层原理。",
+            "喜欢游玩与自组 Modpack，和朋友有 Linux server。"
+          ]
+        },
+        {
+          "name": "Phasmophobia",
+          "summary": "擅长情报分析的送头员。",
+          "details": [
+            "擅长情报分析。",
+            "无 Bug 通关天启 15 倍疯人院纪录及奖杯。",
+            "0.9 版本全成就达成（54/54）。"
+          ],
+          "images": [
+            "https://drive.miyago9267.com/d/home/miyago/Pictures/link_gen/2024_11_14/Phasmophobia_metal.webp",
+            "https://drive.miyago9267.com/d/home/miyago/Pictures/link_gen/Screenshot_2024-03-19%2015.34.19_zbqHZN.png"
+          ]
+        },
+        {
+          "name": "GTA V",
+          "summary": "故事模式玩家，偶尔在线合作抢劫。",
+          "details": [
+            "ID: Miyago9267",
+            "等级约 114，经济约 2000 万。",
+            "别墅推出前，旧版全资产都有。"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "EDM / 音乐",
+      "items": [
+        {
+          "name": "推的曲师",
+          "summary": "偏好速核、硬派路线，喜欢高侵略性、富有能量的音乐。",
+          "details": [
+            "Hardcore Tano*c全员",
+            "Kobaryo + HiTNEX TRAX 全员",
+            "Sasakure.UK + TJ.hangneil",
+            "Sefa",
+            "Angerfist"
+          ]
+        },
+        {
+          "name": "常听曲风",
+          "summary": "Hardcore、DnB、Breakbeat、Techno 等。",
+          "details": [
+            "Mainstream Hardcore",
+            "Breakbeat / Breakcore",
+            "Techno / Schranz",
+            "Dubstep",
+            "DnB"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "动画 / 漫画 / 企划",
+      "items": [
+        {
+          "name": "魔法少女小圆",
+          "summary": "神作认定，不接受任何异议。",
+          "details": [
+            "神作，请去看，谢谢。",
+            "唯一真神圆神。"
+          ]
+        },
+        {
+          "name": "命运石之门",
+          "summary": "神作认定，不接受任何异议。",
+          "details": [
+            "神作，请去看，谢谢。",
+            "去看，给我去看。"
+          ]
+        },
+        {
+          "name": "LoveLive 系列",
+          "summary": "团推肥皂、虹咲推花阳。",
+          "details": [
+            "你好谢谢小笼包再见多谢你兹啦。",
+            "声优推逢田姐、未梦、鲤鱼。"
+          ]
+        },
+        {
+          "name": "BangDream 系列",
+          "summary": "长期玩家，从 2018 入坑。",
+          "details": [
+            "2018 入坑。",
+            "推 R 团，角色推瑠唯。",
+            "从 MyGO 入坑的也欢迎交流。"
+          ]
+        },
+        {
+          "name": "其他",
+          "summary": "很杂,会追新番,偶尔补旧番。",
+          "details": [
+            "近 20 年的番大致略知一二。",
+            "平成年代前期略有研究。",
+            "平成后期、令和年代新番涉猎较多。",
+            "类型很杂,族繁不及备载。",
+            "---",
+            "笨拙上野、重启咲良田、辉夜姬、圣斗士、JOJO、链锯人",
+            "超砲、你遭难了吗、健身少女、坂本日常、无职、Fate系列",
+            "钢炼、光美系列、星光系列、美战"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "其他",
+      "items": [
+        {
+          "name": "ヲタ芸 / オタ芸",
+          "summary": "以地下艺为主，有受邀才会合作拍片。",
+          "details": [
+            "平常只打地下自娱，动作极度不标准，不参与表演。",
+            "会的技：雷蛇、天照、村正、武正、樱华、烈火舞。",
+            "原创技：风人神"
+          ]
+        },
+        {
+          "name": "Ableton Live",
+          "summary": "刚入坑 DTM 的学习中。",
+          "details": [
+            "2024 年 4 月开始学乐理、作曲与编曲。",
+            "完全 0 音乐基础，正在学习中。",
+            "（这个人这么说但2025年一首歌都没做）"
+          ]
+        },
+        {
+          "name": "maimai DX",
+          "summary": "音游常驻坑，下一个目标是桃将。",
+          "details": [
+            "ID: 7089744697662",
+            "Rating 15200、桃极持有。",
+            "目标：下一张极牌、桃将。"
+          ]
+        }
+      ]
+    }
+  ],
+  "sideProjects": [
+    {
+      "name": "东方灵萃坛",
+      "description": "2026 年的东方同人放置养成游戏，附 STG 小游戏。",
+      "stack": [
+        "Game",
+        "Web"
+      ],
+      "href": "https://touhou.reisuidan.com"
+    },
+    {
+      "name": "MyGO 贴图搜索器",
+      "description": "MyGO 贴图的搜索器与数据整理。",
+      "stack": [
+        "Tool",
+        "Web"
+      ],
+      "href": "https://mygo.miyago9267.com"
+    },
+    {
+      "name": "2024 愚人节企划 - 巴别塔精神病院",
+      "description": "2024 愚人节实作的剧本文字冒险网页游戏。",
+      "stack": [
+        "Event",
+        "Web"
+      ],
+      "href": "https://2024.miyago9267.com"
+    },
+    {
+      "name": "2025 愚人节企划 - 怪盗 XD 与早稻前学园侦探社",
+      "description": "2025 愚人节实作的视觉小说类解谜游戏。",
+      "stack": [
+        "Event",
+        "Web"
+      ],
+      "href": "https://2025.miyago9267.com"
+    },
+    {
+      "name": "GitHub",
+      "description": "个人程序与作品仓库。",
+      "stack": [
+        "Code",
+        "Open Source"
+      ],
+      "href": "https://github.com/miyago9267"
+    },
+    {
+      "name": "Miyago9267 Blog",
+      "description": "个人 blog，链接点进去是旧版且更详细的自介。",
+      "stack": [
+        "Blog",
+        "Writing"
+      ],
+      "href": "https://miyago9267.com/about"
+    },
+    {
+      "name": "Miyagoの魔法部屋",
+      "description": "你现在看到的这个网页。",
+      "stack": [
+        "Blog",
+        "Writing"
+      ],
+      "href": "https://github.com/miyago9267/personal-website"
+    }
+  ],
+  "channels": [
+    {
+      "title": "GitHub",
+      "detail": "程序与笔记",
+      "href": "https://github.com/miyago9267"
+    },
+    {
+      "title": "Facebook",
+      "detail": "社群与动态",
+      "href": "https://facebook.com/miyago9267"
+    },
+    {
+      "title": "Discord",
+      "detail": "聊天与合作",
+      "href": "https://discordapp.com/users/469168464955703318"
+    }
+  ],
+  "contact": {
+    "title": "想跟我聊聊？",
+    "body": "如果你有兴趣认识一个会思考、会写作、又会写程序的酷酷朋朋，欢迎和我聊聊！",
+    "ctaLabel": "寄信给我",
+    "ctaHref": "mailto:miyago9267@gmail.com"
+  },
+  "friendLinks": [
+    {
+      "name": "Fanlan",
+      "description": "繁岚的个人站",
+      "href": "https://www.fanlan.net/"
+    }
+  ]
+}

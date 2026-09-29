@@ -1,0 +1,66 @@
+{
+  "header": {
+    "language": "Change language"
+  },
+  "nav": {
+    "fandoms": "Fandoms"
+  },
+  "loading": "Now praying (少女祈禱中)",
+  "hero": {
+    "roles": [
+      "MUGer",
+      "Writer",
+      "Programmer",
+      "Apprentice Magician",
+      "SRE Engineer",
+      "Rhythm Gamer",
+      "Full Stack Dev",
+      "Gensokyo Resident"
+    ]
+  },
+  "about": {
+    "title": "A weirdo with one foot in literature and one in science",
+    "secret": "Truth is, I'm an apprentice magician living in Gensokyo."
+  },
+  "story": {
+    "title": "My story and the path so far"
+  },
+  "skills": {
+    "title": "Tech stack",
+    "subtitle": "From the system internals to the user interface, from algorithms to AI applications.",
+    "comboMessages": {
+      "c50": "Skill tree gone wild!",
+      "c30": "Jack of all trades!",
+      "c10": "Skill collector"
+    }
+  },
+  "experience": {
+    "title": "Background",
+    "subtitle": "Experience from every field, strung into a world line chosen by Steins;Gate.",
+    "toggle": "Expand / collapse",
+    "itemCount": "{n} achievements"
+  },
+  "fandom": {
+    "title": "Fandoms",
+    "subtitle": "The time etched into my footprints across the internet.",
+    "view": "View",
+    "listHeader": "Some titles"
+  },
+  "projects": {
+    "subtitle": "Turning spur-of-the-moment ideas into something real."
+  },
+  "social": {
+    "title": "Find me online",
+    "subtitle": "Want to see more of my daily life and work, or just chat? This is where to find me."
+  },
+  "friends": {
+    "title": "Friend links",
+    "subtitle": "Sites and works by friends that I like.",
+    "empty": "No friend links yet. Coming soon."
+  },
+  "konami": {
+    "title": "Hidden achievement unlocked!",
+    "subtitle": "You found the Konami Code easter egg.",
+    "hint": "Keep exploring. There are more surprises to find."
+  }
+}

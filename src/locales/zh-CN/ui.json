@@ -1,0 +1,107 @@
+{
+  "header": {
+    "brandKicker": "MIYAGO",
+    "brandTitle": "Personal Media",
+    "menu": "Menu",
+    "toLight": "Switch to light mode",
+    "toDark": "Switch to dark mode",
+    "language": "切换语言"
+  },
+  "nav": {
+    "story": "Story",
+    "about": "About",
+    "experience": "Experience",
+    "fandoms": "Fandom",
+    "projects": "Projects",
+    "social": "Social",
+    "friends": "Friends",
+    "blog": "Blog"
+  },
+  "loading": "少女祈祷中",
+  "hero": {
+    "greeting": "Hello World, Miyago here",
+    "roles": [
+      "MUGer",
+      "Writer",
+      "Programmer",
+      "见习魔法使",
+      "SRE Engineer",
+      "音游玩家",
+      "Full Stack Dev",
+      "幻想乡住民"
+    ],
+    "scroll": "Scroll ↓"
+  },
+  "about": {
+    "kicker": "About",
+    "title": "脚踏文学和理学的怪人",
+    "secret": "其实我是住在幻想乡的见习魔法使"
+  },
+  "story": {
+    "kicker": "Story",
+    "title": "我的个人故事与轨迹",
+    "identity": "Identity",
+    "focus": "Current Focus"
+  },
+  "skills": {
+    "kicker": "Skills",
+    "title": "技术栈",
+    "subtitle": "从系统底层到用户界面，从算法到 AI 应用。",
+    "combo": "Combo",
+    "comboMessages": {
+      "c50": "究极技能树乱点人！",
+      "c30": "全能工程师！",
+      "c20": "Full Stack Master!",
+      "c10": "技能收集家",
+      "c5": "Combo!"
+    }
+  },
+  "experience": {
+    "kicker": "Experience",
+    "title": "学经历",
+    "subtitle": "各个领域的累积，串成一条命运石之门选择的世界线。",
+    "toggle": "展开/收合",
+    "itemCount": "{n} 项成就"
+  },
+  "fandom": {
+    "kicker": "Fandom",
+    "title": "坑单",
+    "subtitle": "我在活网的足迹里所铭刻的光阴。",
+    "view": "查看",
+    "listHeader": "部分作品列表"
+  },
+  "projects": {
+    "kicker": "Side Projects",
+    "title": "Side Projects",
+    "subtitle": "把灵机一动的鬼点子变成看得见的现实。",
+    "view": "View project →"
+  },
+  "social": {
+    "kicker": "Social",
+    "title": "社交链接",
+    "subtitle": "想看更多日常、作品或交流？欢迎从这里找到我。",
+    "follow": "Follow →"
+  },
+  "contact": {
+    "kicker": "Contact"
+  },
+  "friends": {
+    "kicker": "Friends",
+    "title": "友站快速链接",
+    "subtitle": "一些喜欢的网站或朋友的作品链接。",
+    "empty": "尚未加入友站链接，之后会补上。"
+  },
+  "footer": {
+    "builtBy": "Built by Miyago9267 © 2026",
+    "motto": "Designing resilient systems & memorable stories.",
+    "translationNote": ""
+  },
+  "konami": {
+    "title": "成功解锁隐藏成就！",
+    "subtitle": "你找到了 Konami Code 彩蛋",
+    "hint": "继续探索，还有更多想不到的惊喜"
+  },
+  "modal": {
+    "close": "Close"
+  }
+}

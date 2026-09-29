@@ -1,0 +1,393 @@
+{
+  "tagline": "Transformer la curiosité en créations, et les créations en histoires.",
+  "bio": [
+    "Un apprenti magicien qui vit dans les forêts de Gensokyo et qui, dans le monde extérieur, travaille comme ingénieur SRE tout en terminant ses études. Mon arbre de compétences est un joyeux bazar : j'adore apprendre plein de trucs au hasard et je sais faire presque de tout, même si je ne prétendrai jamais être excellent partout.",
+    "Dès que je me plonge dans un nouveau sujet, je m'y perds complètement (lol) et je me retrouve embarqué dans une nouvelle aventure. J'aime la philosophie, les sciences, un peu de littérature, et écrire de petits programmes de temps en temps. En ce moment j'apprends la production musicale en DTM, et j'espère voir un jour un de mes morceaux dans un jeu de rythme !"
+  ],
+  "story": [
+    "Je suis Miyago, quelqu'un qui mélange ingénierie, création et culture internet.",
+    "Je crois qu'une marque personnelle, c'est plus qu'une image. Ce sont les choix que l'on a faits, les chemins que l'on a parcourus et les traces que l'on laisse sur internet.",
+    "Cette page rassemble mon parcours, mes terriers ACG et culture internet, mes projets perso et les endroits où me retrouver en ligne."
+  ],
+  "highlights": [
+    {
+      "title": "En ce moment",
+      "value": "SRE / Infra"
+    },
+    {
+      "title": "Mots-clés",
+      "value": "ICT · MUG"
+    },
+    {
+      "title": "Focus",
+      "value": "Narration x Résonance"
+    }
+  ],
+  "skills": [
+    {
+      "description": "Ingénierie de la fiabilité, automatisation et infrastructure"
+    },
+    {
+      "description": "Développement backend et conception d'API"
+    },
+    {
+      "description": "Développement frontend et interfaces utilisateur"
+    },
+    {
+      "description": "Conception et administration de bases de données"
+    },
+    {
+      "description": "Intelligence artificielle et apprentissage automatique"
+    },
+    {
+      "description": "Autres compétences",
+      "items": [
+        "Arduino/ESP32",
+        "Flutter",
+        "C/C++",
+        "Bases de la sécurité"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "title": "Tech",
+      "entries": [
+        {
+          "items": [
+            "Président du club d'informatique du lycée Fengshan (110e promotion)"
+          ]
+        },
+        {
+          "items": [
+            "Responsable pédagogique du club Open Source de l'université Ming Chuan (4e promotion) / équipe principale GDSC",
+            "Médaille de bronze PUPC 2022",
+            "Participant à l'ICPC 2022"
+          ]
+        },
+        {
+          "items": [
+            "Médaille d'or PUPC 2023",
+            "Conseiller invité du club Open Source de l'université Ming Chuan (5e promotion)"
+          ]
+        },
+        {
+          "items": [
+            "Créé seul le moteur de recherche de stickers MyGO",
+            "Co-développeur et PM backend du chat vocal RiceCall"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Jeux vidéo",
+      "entries": [
+        {
+          "year": "Jeux de rythme",
+          "items": [
+            "BanG Dream! (le Girls Band Party d'origine) : toutes les musiques jusqu'au Lv.28 en All Perfect, meilleur AP Lv.29, meilleur FC Lv.30",
+            "Project Sekai : rang 真皆伝 (Shin Kaiden) (35 AP, meilleur AP Lv.31, meilleur FC Lv.32)",
+            "Arcaea : rang 摘星 (Potential 12.538)",
+            "maimai DX : Rating 15200, détenteur de la plaque 桃極 (Momo Kiwami)"
+          ]
+        },
+        {
+          "year": "Touhou Project",
+          "items": [
+            "Unfinished Dream of All Living Ghost (UDoALG) : Easy 1cc, Normal terminé avec 3 continues (Reimu, pierre en forme de lune)",
+            "Legacy of Lunatic Kingdom (LoLK) : Easy terminé en mode Pointdevice",
+            "Embodiment of Scarlet Devil (EoSD) : Normal terminé (Reimu A)",
+            "Undefined Fantastic Object (UFO) et Hidden Star in Four Seasons (HSiFS) : Easy terminés"
+          ]
+        },
+        {
+          "year": "Autres",
+          "items": [
+            "Speedrun Minecraft à seed aléatoire (RSG), record perso : 47:12.93",
+            "Défi Apocalypse 15x de Phasmophobia : or, enquête parfaite",
+            "Touhou LNN : zéro (j'avais juste envie de l'écrire)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Tout le reste",
+      "entries": [
+        {
+          "year": "Pages de fans",
+          "items": [
+            "Peko Gourmet Society : rédacteur \"Hanako\"",
+            "法蘭西斯莫來管 : rédacteur bonsaïs et plantes"
+          ]
+        },
+        {
+          "year": "Autres",
+          "items": [
+            "J'ai une copine (c'est elle qui m'a dit de l'écrire)"
+          ]
+        }
+      ]
+    }
+  ],
+  "fandoms": [
+    {
+      "title": "Les trous les plus profonds",
+      "items": [
+        {
+          "name": "Série DDLC",
+          "summary": "Un des plus profonds. Je fais et je joue des mods et des œuvres de fans.",
+          "details": [
+            "Je fais et je joue des mods et des jeux de fans de DDLC.",
+            "Je dessine une illustration d'anniversaire chaque année.",
+            "Tu trouveras BEAUCOUP de Monika sur mon feed."
+          ]
+        },
+        {
+          "name": "Touhou",
+          "summary": "Mon terrier le plus profond. Un nerd du lore et théoricien de l'univers de ZUN, entré par les bandes originales.",
+          "details": [
+            "J'ai joué à EoSD / PCB / IN / SA / MoF / UFO / HSiFS, avec des clears sur UDoALG / LoLK / HSiFS.",
+            "Nul en shmup, mais je m'entraîne encore. Normal terminé sur EoSD (Reimu A) et UDoALG (3 continues).",
+            "Personnage préféré : Hecatia Lapislazuli (ヘカーティア・ラピスラズリ)",
+            "Plutôt un nerd du lore. En 2026, j'ai fait un jeu de fans Touhou, Touhou Reisuidan.",
+            "Je possède un énorme Fumo de Cirno de 40 cm."
+          ]
+        },
+        {
+          "name": "Musique électronique",
+          "summary": "Doujin ou commerciale, occidentale ou japonaise, j'adore explorer les genres.",
+          "details": [
+            "Préféré : Hardcore Tano*C",
+            "Styles préférés : hardcore, arrangements Touhou, morceaux Vocaloid"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Jeux mobiles",
+      "items": [
+        {
+          "name": "Tower of Saviors",
+          "summary": "Je râle dessus tout le temps et je continue à y jouer. Surtout en spectateur, mais je grimpe quand même dans les classements, et j'adore collectionner et monter des équipes bizarres.",
+          "details": [
+            "UID : 849008640",
+            "Surtout en spectateur, mais je grimpe quand même dans les classements.",
+            "J'aime monter des équipes bizarres de clones ou d'une même série."
+          ]
+        },
+        {
+          "summary": "Un de mes jeux de rythme principaux, toujours actif.",
+          "details": [
+            "Nom : Miyago9267",
+            "ID : 737 694 096",
+            "Troisième joueur au monde à avoir obtenu 洞燭."
+          ]
+        },
+        {
+          "name": "Divers",
+          "summary": "Abandonnés ou à moitié, mais je suis toujours l'actualité.",
+          "details": [
+            "Princess Connect! Re:Dive : arrêté, je ne suis plus que le serveur JP et les doubleurs.",
+            "BanG Dream! (version d'origine uniquement) : Ringing Bloom EX29 AP, R SP29 AP, HoH SP30 FC.",
+            "Project Sekai : 真皆伝 (Shin Kaiden) 1, meilleur AP Lv.31."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Jeux PC",
+      "items": [
+        {
+          "name": "Plateformes",
+          "summary": "Les comptes de plateformes de jeu que j'utilise.",
+          "details": [
+            "Steam : 899348396",
+            "Origin : KyCoEMark",
+            "Uplay : Miyago9267"
+          ]
+        },
+        {
+          "summary": "Je joue depuis la beta 1.4. J'adore fouiller dans les entrailles du jeu et la redstone technique.",
+          "details": [
+            "De la beta 1.4 à aujourd'hui.",
+            "Commandes, datapacks, plugins, mods, redstone technique, et tout le fonctionnement interne.",
+            "J'aime jouer et monter mes propres modpacks, et j'héberge un serveur Linux avec des amis."
+          ]
+        },
+        {
+          "summary": "L'analyste du renseignement qui meurt en premier.",
+          "details": [
+            "Doué pour analyser les preuves.",
+            "Apocalypse 15x sans bug sur Asylum, avec le trophée.",
+            "Tous les succès de la version 0.9 (54/54)."
+          ]
+        },
+        {
+          "summary": "Joueur du mode histoire, participe parfois à des braquages en ligne.",
+          "details": [
+            "ID : Miyago9267",
+            "Environ niveau 114, à peu près 20 millions en banque.",
+            "Je possédais toutes les propriétés sorties avant la mise à jour des manoirs."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "EDM / Musique",
+      "items": [
+        {
+          "name": "Artistes préférés",
+          "summary": "Penchant speedcore et hardcore. J'adore la musique agressive et pleine d'énergie.",
+          "details": [
+            "Tout Hardcore Tano*C",
+            "Kobaryo + tout HiTNEX TRAX",
+            "Sasakure.UK + TJ.hangneil",
+            "Sefa",
+            "Angerfist"
+          ]
+        },
+        {
+          "name": "Genres de prédilection",
+          "summary": "Hardcore, DnB, Breakbeat, Techno, et plus encore.",
+          "details": [
+            "Mainstream Hardcore",
+            "Breakbeat / Breakcore",
+            "Techno / Schranz",
+            "Dubstep",
+            "DnB"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Anime / Manga / Franchises",
+      "items": [
+        {
+          "name": "Puella Magi Madoka Magica",
+          "summary": "Un chef-d'œuvre certifié. Aucune objection acceptée.",
+          "details": [
+            "Un chef-d'œuvre. Allez le regarder, s'il vous plaît. Merci.",
+            "Madokami est le seul vrai dieu."
+          ]
+        },
+        {
+          "name": "Steins;Gate",
+          "summary": "Un chef-d'œuvre certifié. Aucune objection acceptée.",
+          "details": [
+            "Un chef-d'œuvre. Allez le regarder, s'il vous plaît. Merci.",
+            "Allez le regarder. Maintenant."
+          ]
+        },
+        {
+          "name": "Série Love Live!",
+          "summary": "Mon choix du groupe : 肥皂. Chez Nijigasaki : 花陽.",
+          "details": [
+            "Ni hao, xie xie, xiaolongbao, zaijian.",
+            "Seiyuu préférées : 逢田姐 (Aida Rikako), 未夢, 鯉魚."
+          ]
+        },
+        {
+          "name": "Série BanG Dream!",
+          "summary": "Joueur de longue date depuis 2018.",
+          "details": [
+            "Arrivé en 2018.",
+            "Groupe préféré : R團. Personnage préféré : 瑠唯 (Rui).",
+            "Si tu es arrivé par MyGO, viens dire coucou."
+          ]
+        },
+        {
+          "name": "Autres",
+          "summary": "Un peu de tout. Je suis les nouveaux animes de la saison et je rattrape les anciens.",
+          "details": [
+            "Je connais à peu près les vingt dernières années d'anime.",
+            "Quelques notions sur les œuvres du début de l'ère Heisei.",
+            "J'ai vu beaucoup plus de la fin de Heisei et de Reiwa.",
+            "Trop de genres pour tout lister.",
+            "---",
+            "Clumsy Ueno、Sakurada Reset、Kaguya-sama、Les Chevaliers du Zodiaque、JoJo、Chainsaw Man",
+            "A Certain Scientific Railgun、Are You Lost?、How Heavy Are the Dumbbells You Lift?、Sakamoto Days、Mushoku Tensei、Série Fate",
+            "Fullmetal Alchemist、Série Pretty Cure、Pretty Series (星光系列)、Sailor Moon"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Autres",
+      "items": [
+        {
+          "name": "Wotagei",
+          "summary": "Surtout du wotagei underground. Je ne collabore sur des vidéos que sur invitation.",
+          "details": [
+            "Je le fais en général pour le plaisir, en underground. Ma technique est très approximative, et je ne me produis pas.",
+            "Mouvements que je connais : 雷蛇, 天照, 村正, 武正, 櫻華, 烈火舞.",
+            "Mouvement original : 風人神"
+          ]
+        },
+        {
+          "summary": "J'apprends la DTM à partir de zéro.",
+          "details": [
+            "J'ai commencé la théorie musicale, la composition et l'arrangement en avril 2024.",
+            "Aucun bagage musical, j'apprends encore.",
+            "(Dit celui qui n'a pas terminé un seul morceau en 2025.)"
+          ]
+        },
+        {
+          "summary": "Mon jeu de rythme habituel. Prochain objectif : la plaque 桃将 (Momo Shou).",
+          "details": [
+            "ID : 7089744697662",
+            "Rating 15200, détenteur de la plaque 桃極.",
+            "Objectifs : la prochaine plaque Kiwami, puis Momo Shou."
+          ]
+        }
+      ]
+    }
+  ],
+  "sideProjects": [
+    {
+      "name": "Touhou Reisuidan",
+      "description": "Un idle game de fans Touhou de 2026 avec un mini-jeu STG."
+    },
+    {
+      "name": "MyGO Sticker Searcher",
+      "description": "Un moteur de recherche et un dataset de stickers MyGO."
+    },
+    {
+      "name": "April Fools 2024: Tower of Babel Asylum",
+      "description": "Un jeu web d'aventure textuelle scénarisé, fait pour April Fools 2024."
+    },
+    {
+      "name": "April Fools 2025: Phantom Thief XD and the Wasedamae Academy Detective Club",
+      "description": "Un jeu d'enquête façon visual novel, fait pour April Fools 2025."
+    },
+    {
+      "description": "Mon code et mes dépôts de projets."
+    },
+    {
+      "description": "Mon blog perso. Le lien mène à une ancienne présentation, plus détaillée."
+    },
+    {
+      "description": "La page que tu es en train de regarder."
+    }
+  ],
+  "channels": [
+    {
+      "detail": "Code et notes"
+    },
+    {
+      "detail": "Actus et publications"
+    },
+    {
+      "detail": "Discussions et collabs"
+    }
+  ],
+  "contact": {
+    "title": "Envie de discuter ?",
+    "body": "Si tu as envie de rencontrer quelqu'un qui réfléchit, écrit et code, et qui est aussi un chouette ami, n'hésite pas à me contacter !",
+    "ctaLabel": "M'envoyer un e-mail"
+  },
+  "friendLinks": [
+    {
+      "description": "Site personnel de Fanlan"
+    }
+  ]
+}

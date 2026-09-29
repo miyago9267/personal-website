@@ -1,0 +1,69 @@
+{
+  "header": {
+    "language": "Cambiar idioma"
+  },
+  "nav": {
+    "fandoms": "Fandoms"
+  },
+  "loading": "Rezando ahora (少女祈禱中)",
+  "hero": {
+    "roles": [
+      "MUGer",
+      "Escritor",
+      "Programador",
+      "Mago aprendiz",
+      "Ingeniero SRE",
+      "Jugador de juegos de ritmo",
+      "Desarrollador Full Stack",
+      "Habitante de Gensokyo"
+    ]
+  },
+  "about": {
+    "title": "Un bicho raro con un pie en las letras y otro en la ciencia",
+    "secret": "La verdad es que soy un mago aprendiz que vive en Gensokyo."
+  },
+  "story": {
+    "title": "Mi historia y el camino hasta aquí"
+  },
+  "skills": {
+    "title": "Stack tecnológico",
+    "subtitle": "Desde las entrañas del sistema hasta la interfaz de usuario, de los algoritmos a las aplicaciones de IA.",
+    "comboMessages": {
+      "c50": "¡Árbol de habilidades descontrolado!",
+      "c30": "¡Todoterreno!",
+      "c10": "Coleccionista de habilidades"
+    }
+  },
+  "experience": {
+    "title": "Trayectoria",
+    "subtitle": "Experiencias de todos los campos, enhebradas en la línea temporal elegida por Steins;Gate.",
+    "toggle": "Expandir / contraer",
+    "itemCount": "{n} logros"
+  },
+  "fandom": {
+    "title": "Fandoms",
+    "subtitle": "El tiempo grabado en mis huellas por internet.",
+    "view": "Ver",
+    "listHeader": "Algunos títulos"
+  },
+  "projects": {
+    "subtitle": "Convirtiendo ideas del momento en algo real."
+  },
+  "social": {
+    "title": "Encuéntrame en línea",
+    "subtitle": "¿Quieres ver más de mi día a día y mi trabajo, o simplemente charlar? Aquí me encuentras."
+  },
+  "friends": {
+    "title": "Enlaces de amigos",
+    "subtitle": "Sitios y obras de amigos que me gustan.",
+    "empty": "Aún no hay enlaces de amigos. Próximamente."
+  },
+  "konami": {
+    "title": "¡Logro oculto desbloqueado!",
+    "subtitle": "Encontraste el easter egg del Código Konami.",
+    "hint": "Sigue explorando. Hay más sorpresas por descubrir."
+  },
+  "footer": {
+    "translationNote": "Esta página fue traducida con asistencia automática."
+  }
+}
