@@ -84,9 +84,17 @@ ESLint 10 已經移除 `.eslintrc`，改成 `eslint.config.js`，並用 `typescr
 
 網站只需要依語言整份替換內容，不需要複數規則或 ICU 格式，約 40 行就能完成。**狀態**：accepted。
 
-### ADR-C2：內容分成 base 與 overlay
+### ADR-C2：zh-TW 為完整 base，其他語言為 overlay
 
-`src/data/profile.json` 保留不需要翻譯的欄位（URL、圖片、ID）。`src/locales/<lang>/{profile,ui}.json` 只放文字，執行時 deep-merge。**狀態**：accepted。
+`src/data/profile.json` 與 `src/locales/zh-TW/ui.json` 保持完整的 zh-TW 內容。`src/locales/<lang>/{profile,ui}.json` 只放需要翻譯的欄位，在 mount 前做 deep-merge（`src/i18n/core.ts` 的 `mergeOverlay`）：
+
+- 物件陣列依 index 合併，URL、圖片等欄位由 base 補上。
+- 字串陣列整份替換。
+- 缺少 key 時 fallback 到 zh-TW。
+
+非 zh-TW 的 overlay 以 lazy chunk 載入。原本規劃 base 只放不需翻譯的欄位，後來改成 zh-TW 直接當 base，這樣 fallback 最自然，也不用搬動既有資料。**狀態**：accepted（2026-09-29 修訂）。
+
+慣例：坑單 `details` 中 `---` 之後的行是作品清單，以「、」分隔並顯示成 tag；`---` 之前都是一般說明，所以日文等語言可以正常使用「、」。這取代了原本「只要含有「、」就當作清單」的判斷，該判斷在 zh-TW 也會誤拆聲優、招式和成績等行。
 
 ### ADR-C3：`zh-CN` 由 OpenCC 產生
 

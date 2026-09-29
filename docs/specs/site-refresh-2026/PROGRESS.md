@@ -23,11 +23,19 @@
 
 ### 備註
 
-- `FandomSection.vue` 會把含有「、」的 detail 當成作品清單拆開顯示，所以一般說明文字不要用「、」。
+- 作品清單改用 `---` 標記（見 SPEC ADR-C2 慣例）。
 
-## Phase C：多語系（未開始，依賴 B 的內容定稿）
+## Phase C：多語系（進行中）
 
-- [ ] C1：`useLocale` 與 overlay 結構，把寫死的字串抽出來（只有 zh-TW，畫面不變）
-- [ ] C2：語言切換器，加上 `en`
-- [ ] C3：`ja`、`es`、`fr`，以及 OpenCC 產生的 `zh-CN`
+- [x] C1：`src/i18n/`（core + loader）、`src/locales/zh-TW/ui.json`，把 15 個元件中寫死的字串抽出來。驗證：新舊 build 整頁文字與 aria-label 完全一致，只有 `<html lang>` 從 `zh-Hant` 改成 `zh-TW`
+- [x] C2：`LocaleSwitcher`（header）、`LocaleSuggestion`（根目錄依瀏覽器語言提示，不自動轉址），`base` 改成 `/`，並補上 `en` 翻譯。驗證：`/en/` 除了刻意保留的專有名詞外沒有中文；ja-JP 瀏覽器會看到日文 banner，切換後到 `/ja/` 並記住選擇
+- [x] `bun test`（17 pass）、`bun run check:locales`
+- [ ] en 翻譯等 Miyago 審稿，尤其是保留原文的專有名詞：摘星、洞燭、桃極、肥皂、未夢、鯉魚、R團、打 call 招式名
+- [x] C3：
+  - `ja` 由 Claude 翻譯，等 Miyago 審稿。
+  - `es`、`fr` 由 Claude 翻譯，footer 標示 machine-assisted。
+  - `zh-CN` 由 `bun run gen:zh-cn` 產生（OpenCC twp→cn），並加上一張修正表處理圈內用語。
+  - 作品清單改用 `---` 標記。
+  - 驗證：6 種語言的 lang、切換器、作品清單、footer 註記都正確，console 0 error。
+- [x] C1-C3 在 2026-09-29 一起 commit 並部署
 - [ ] C4：每個語言各自的 `index.html`、`hreflang`、meta，以及 `check-locales.ts`
