@@ -296,6 +296,12 @@ a:focus-visible,
   }
 }
 
+/* 盤古之白等擴充會在中英文交界插入 <pangu> </pangu>；
+   不讓它在 grid/flex 裡變成獨立格子，一般行內文字的空白照常顯示 */
+pangu {
+  display: contents;
+}
+
 button::-moz-focus-inner {
   border: 0;
 }
