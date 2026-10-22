@@ -13,7 +13,8 @@
     "typecheck": "bunx --bun vue-tsc --noEmit",
     "test": "bun test",
     "check:locales": "bun scripts/check-locales.ts",
-    "gen:zh-cn": "bun scripts/gen-zh-cn.ts"
+    "gen:zh-cn": "bun scripts/gen-zh-cn.ts",
+    "translate:locales": "bun scripts/translate-locales.ts"
   },
   "dependencies": {
     "unocss": "^66.10.5",

@@ -2,6 +2,7 @@
 // 用法：bun scripts/check-locales.ts；有多餘（拼錯）的 key 時 exit 1。
 import { readdirSync, readFileSync, existsSync } from 'node:fs'
 import { join } from 'node:path'
+import { missingKeys } from './locale-utils'
 
 const root = join(import.meta.dir, '..', 'src')
 const bases: Record<string, unknown> = {
@@ -23,22 +24,6 @@ function extraKeys(base: unknown, overlay: unknown, path: string): string[] {
     return Object.keys(overlay).flatMap((k) => (k in base ? extraKeys(base[k], overlay[k], `${path}.${k}`) : [`${path}.${k}`]))
   }
   return []
-}
-
-const hasCjk = (v: unknown) => typeof v === 'string' && /[\u3040-\u30ff\u3400-\u9fff]/.test(v)
-
-// 回傳 base 含中文、但 overlay 沒提供翻譯的路徑（純 URL、ID、英文名不需要翻）
-function missingKeys(base: unknown, overlay: unknown, path: string): string[] {
-  if (Array.isArray(base)) {
-    if (base.length > 0 && base.every(isRecord)) {
-      return base.flatMap((item, i) => missingKeys(item, Array.isArray(overlay) ? overlay[i] : undefined, `${path}[${i}]`))
-    }
-    return overlay === undefined && base.some(hasCjk) ? [path] : []
-  }
-  if (isRecord(base)) {
-    return Object.keys(base).flatMap((k) => missingKeys(base[k], isRecord(overlay) ? overlay[k] : undefined, `${path}.${k}`))
-  }
-  return hasCjk(base) && overlay === undefined ? [path] : []
 }
 
 let failed = false
