@@ -544,17 +544,20 @@
     {
       "name": "Fanlan",
       "description": "繁嵐的個人站",
-      "href": "https://www.fanlan.net/"
+      "href": "https://www.fanlan.net/",
+      "icon": "https://www.fanlan.net/icons/icon-96x96.png"
     },
     {
       "name": "CabLate",
       "description": "CabLate 的個人站，AI 應用、Agent 與產品實作",
-      "href": "https://cablate.com/"
+      "href": "https://cablate.com/",
+      "icon": "https://cablate.com/favicon.webp"
     },
     {
       "name": "Nyanako",
       "description": "Nyanako 個人站，開源、維運的好朋友",
-      "href": "https://nyanako.com/"
+      "href": "https://nyanako.com/",
+      "icon": "https://nyanako.com/apple-touch-icon.png"
     }
   ]
 }
