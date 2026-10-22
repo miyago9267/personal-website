@@ -2,10 +2,11 @@
   "name": "水源宮語",
   "nickname": "宮語 / Miyago",
   "roles": [
-    "SRE Engineer",
-    "Writer",
+    "Site Reliability Engineer",
+    "Literature Enthusiast",
     "Programmer",
-    "MUGer"
+    "MUGer",
+    "Full Stack Dev"
   ],
   "tagline": "把好奇變成作品，把作品化為故事。",
   "location": "Taiwan",
