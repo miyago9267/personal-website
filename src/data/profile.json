@@ -562,6 +562,12 @@
       "description": "Nyanako 個人站，開源、維運的好朋友",
       "href": "https://nyanako.com/",
       "icon": "https://nyanako.com/apple-touch-icon.png"
+    },
+    {
+      "name": "V-AX",
+      "description": "V-AX 數位工作室，把想法化為行動",
+      "href": "https://v-ax.com/",
+      "icon": "https://v-ax.com/apple-touch-icon.png"
     }
   ]
 }
