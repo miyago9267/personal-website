@@ -1,4 +1,14 @@
 {
+  "roles": [
+    "Site Reliability Engineer",
+    "Literature Enthusiast",
+    "Programmer",
+    "MUGer",
+    "Full Stack Dev",
+    "Apprentice Magician",
+    "Rhythm Gamer",
+    "Gensokyo Resident"
+  ],
   "tagline": "Turning curiosity into creations, and creations into stories.",
   "bio": [
     "An apprentice magician living in the forests of Gensokyo who, in the outside world, works as an SRE engineer while finishing a university degree. My skill tree is a chaotic mess: I love picking up all sorts of random things, and I can do almost anything, though I would never claim to be great at everything.",

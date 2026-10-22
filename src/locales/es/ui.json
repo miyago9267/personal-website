@@ -6,18 +6,7 @@
     "fandoms": "Fandoms"
   },
   "loading": "Rezando ahora (少女祈禱中)",
-  "hero": {
-    "roles": [
-      "MUGer",
-      "Escritor",
-      "Programador",
-      "Mago aprendiz",
-      "Ingeniero SRE",
-      "Jugador de juegos de ritmo",
-      "Desarrollador Full Stack",
-      "Habitante de Gensokyo"
-    ]
-  },
+  "hero": {},
   "about": {
     "title": "Un bicho raro con un pie en las letras y otro en la ciencia",
     "secret": "La verdad es que soy un mago aprendiz que vive en Gensokyo."

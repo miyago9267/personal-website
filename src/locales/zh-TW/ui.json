@@ -20,16 +20,6 @@
   "loading": "少女祈禱中",
   "hero": {
     "greeting": "Hello World, Miyago here",
-    "roles": [
-      "MUGer",
-      "Writer",
-      "Programmer",
-      "見習魔法使",
-      "SRE Engineer",
-      "音遊玩家",
-      "Full Stack Dev",
-      "幻想鄉住民"
-    ],
     "scroll": "Scroll ↓"
   },
   "about": {

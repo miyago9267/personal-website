@@ -2,10 +2,14 @@
   "name": "水源宫语",
   "nickname": "宫语 / Miyago",
   "roles": [
-    "SRE Engineer",
-    "Writer",
+    "Site Reliability Engineer",
+    "Literature Enthusiast",
     "Programmer",
-    "MUGer"
+    "MUGer",
+    "Full Stack Dev",
+    "见习魔法使",
+    "音游玩家",
+    "幻想乡住民"
   ],
   "tagline": "把好奇变成作品，把作品化为故事。",
   "location": "Taiwan",
@@ -544,17 +548,20 @@
     {
       "name": "Fanlan",
       "description": "繁岚的个人站",
-      "href": "https://www.fanlan.net/"
+      "href": "https://www.fanlan.net/",
+      "icon": "https://www.fanlan.net/icons/icon-96x96.png"
     },
     {
       "name": "CabLate",
       "description": "CabLate 的个人站，AI 应用、Agent 与产品实作",
-      "href": "https://cablate.com/"
+      "href": "https://cablate.com/",
+      "icon": "https://cablate.com/favicon.webp"
     },
     {
       "name": "Nyanako",
       "description": "Nyanako 个人站，开源、维运的好朋友",
-      "href": "https://nyanako.com/"
+      "href": "https://nyanako.com/",
+      "icon": "https://nyanako.com/apple-touch-icon.png"
     }
   ]
 }

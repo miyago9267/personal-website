@@ -6,18 +6,7 @@
     "fandoms": "Fandoms"
   },
   "loading": "En pleine prière (少女祈禱中)",
-  "hero": {
-    "roles": [
-      "MUGer",
-      "Écrivain",
-      "Programmeur",
-      "Apprenti magicien",
-      "Ingénieur SRE",
-      "Joueur de jeux de rythme",
-      "Développeur Full Stack",
-      "Résident de Gensokyo"
-    ]
-  },
+  "hero": {},
   "about": {
     "title": "Un drôle d'oiseau, un pied dans les lettres et l'autre dans les sciences",
     "secret": "En vrai, je suis un apprenti magicien qui vit à Gensokyo."

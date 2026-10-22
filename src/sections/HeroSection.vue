@@ -15,7 +15,7 @@ const typedCount = ref(0)
 const isTyped = ref(false)
 
 // 彩蛋:職業輪播（亂碼解析）
-const roles = ui.hero.roles
+const roles = profile.roles
 const currentRoleIndex = ref(0)
 const { text: roleText, scrambleTo, set: setRole } = useTextScramble(roles[0])
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches

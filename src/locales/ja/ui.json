@@ -3,18 +3,7 @@
     "language": "言語を切り替える"
   },
   "loading": "少女祈祷中",
-  "hero": {
-    "roles": [
-      "MUGer",
-      "Writer",
-      "Programmer",
-      "見習い魔法使い",
-      "SRE Engineer",
-      "音ゲーマー",
-      "Full Stack Dev",
-      "幻想郷の住人"
-    ]
-  },
+  "hero": {},
   "about": {
     "title": "文学と理学に片足ずつ突っ込んでる変わり者",
     "secret": "実は幻想郷に住んでいる見習い魔法使いなんです"
