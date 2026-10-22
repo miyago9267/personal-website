@@ -38,6 +38,10 @@ const handleThemeToggle = () => {
       class="fixed inset-0 z-[999] pointer-events-none"
       :class="themeAnimMode === 'sunrise' ? 'theme-wipe theme-wipe--sunrise' : 'theme-wipe theme-wipe--sunset'"
     ></div>
+    <span
+      class="scroll-progress absolute inset-x-0 bottom-0 h-0.5 bg-[linear-gradient(90deg,rgba(186,142,166,0.9),rgba(142,166,186,0.9))] scale-x-0 origin-left pointer-events-none"
+      aria-hidden="true"
+    />
     <div class="w-[min(1120px,92vw)] mx-auto py-4 flex items-center gap-4 justify-start">
       <div class="flex flex-col gap-1">
         <span class="text-[11px] tracking-[0.4em] uppercase text-[var(--muted)]">{{ ui.header.brandKicker }}</span>

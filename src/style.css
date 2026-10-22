@@ -25,6 +25,7 @@
   --hero-sub: rgba(77, 48, 70, 0.6);
   --header-height: 72px;
   --hero-offset: -10vh;
+  --focus-ring: rgba(214, 120, 164, 0.85);
 }
 
 [data-theme='light'] {
@@ -59,6 +60,7 @@
   --hero-strong: #f3f4f6;
   --hero-soft: rgba(243, 244, 246, 0.8);
   --hero-sub: rgba(229, 231, 235, 0.6);
+  --focus-ring: rgba(236, 160, 196, 0.9);
 }
 
 
@@ -277,11 +279,14 @@ a:active,
   box-shadow: none;
 }
 
+/* 鍵盤操作時顯示柔和的粉色外框（滑鼠 :focus 仍不顯示） */
 button:focus-visible,
+[type='button']:focus-visible,
+[type='submit']:focus-visible,
 a:focus-visible,
 [role='button']:focus-visible {
-  outline: none;
-  box-shadow: none;
+  outline: 2px solid var(--focus-ring) !important;
+  outline-offset: 3px;
 }
 
 .card-surface {
@@ -399,5 +404,62 @@ button::-moz-focus-inner {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* 進場與裝飾動畫（以 animate-[...] 引用） */
+@keyframes blob-drift-a {
+  to {
+    transform: translate(60px, 40px) scale(1.15);
+  }
+}
+
+@keyframes blob-drift-b {
+  to {
+    transform: translate(-50px, -30px) scale(1.1);
+  }
+}
+
+@keyframes caret-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes hint-bob {
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+@keyframes tag-pop {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.8);
+  }
+}
+
+@keyframes scroll-progress {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* 捲動進度條：scroll-driven animation，不支援或減少動態時隱藏 */
+.scroll-progress {
+  display: none;
+}
+
+@supports (animation-timeline: scroll()) {
+  .scroll-progress {
+    display: block;
+    animation: scroll-progress linear both;
+    animation-timeline: scroll(root);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-progress {
+      display: none;
+    }
   }
 }

@@ -87,9 +87,11 @@ const handleSkillClick = () => {
         </div>
         <div class="flex flex-wrap gap-2">
           <Tag
-            v-for="item in skillGroup.items"
+            v-for="(item, i) in skillGroup.items"
             :key="item"
             :label="item"
+            :style="{ '--i': i }"
+            class="cursor-pointer active:scale-[0.94] animate-[tag-pop_0.45s_cubic-bezier(0.34,1.56,0.64,1)_calc(var(--i)*60ms)_backwards_paused] revealed:[animation-play-state:running] motion-reduce:animate-none"
             @click="handleSkillClick"
           />
         </div>
@@ -126,18 +128,24 @@ const handleSkillClick = () => {
     rgba(142, 166, 186, 0.6),
     rgba(166, 186, 142, 0.6)
   );
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s var(--ease);
 }
 
 .card-surface:hover::before {
-  opacity: 1;
+  transform: scaleX(1);
 }
 
 /* 技能標籤增強 */
 :deep(.tag) {
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: default;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-surface::before {
+    transition: none;
+  }
 }
 
 :deep(.tag:hover) {

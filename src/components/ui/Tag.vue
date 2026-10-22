@@ -8,7 +8,7 @@ defineProps<TagProps>()
 
 <template>
   <span
-    class="inline-flex items-center rounded-full px-3 py-1 text-xs text-[var(--text)] bg-[var(--panel-bg)] shadow-[var(--card-shadow)]"
+    class="tag inline-flex items-center rounded-full px-3 py-1 text-xs text-[var(--text)] bg-[var(--panel-bg)] shadow-[var(--card-shadow)]"
   >
     {{ label }}
   </span>
