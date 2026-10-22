@@ -1,23 +1,61 @@
 <script setup lang="ts">
 import { useUi } from '../i18n'
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, watch, onUnmounted } from 'vue'
 import { useProfile } from '../composables/useProfile'
+import { isLoading } from '../composables/useLoading'
+import { useTextScramble } from '../composables/useTextScramble'
 const ui = useUi()
 const profile = useProfile()
 
-// 彩蛋:職業輪播
+const TYPE_INTERVAL = 55
+const ROLE_INTERVAL = 3000
+
+const greetingChars = Array.from(ui.hero.greeting)
+const typedCount = ref(0)
+const isTyped = ref(false)
+
+// 彩蛋:職業輪播（亂碼解析）
 const roles = ui.hero.roles
 const currentRoleIndex = ref(0)
-let roleInterval: number | null = null
+const { text: roleText, scrambleTo, set: setRole } = useTextScramble(roles[0])
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
-onMounted(() => {
-  roleInterval = window.setInterval(() => {
+let typeTimer: ReturnType<typeof setInterval> | undefined
+let roleTimer: ReturnType<typeof setInterval> | undefined
+
+const startRoles = () => {
+  roleTimer = setInterval(() => {
     currentRoleIndex.value = (currentRoleIndex.value + 1) % roles.length
-  }, 3000)
-})
+    const next = roles[currentRoleIndex.value]
+    if (reduceMotion) setRole(next)
+    else scrambleTo(next)
+  }, ROLE_INTERVAL)
+}
+
+const finishTyping = () => {
+  clearInterval(typeTimer)
+  typedCount.value = greetingChars.length
+  isTyped.value = true
+  startRoles()
+}
+
+// 載入畫面結束後才開始打字
+watch(
+  isLoading,
+  (loading) => {
+    if (loading || isTyped.value || typeTimer) return
+    if (reduceMotion) return finishTyping()
+    typeTimer = setInterval(() => {
+      typedCount.value++
+      if (typedCount.value >= greetingChars.length) finishTyping()
+    }, TYPE_INTERVAL)
+  },
+  { immediate: true }
+)
 
 onUnmounted(() => {
-  if (roleInterval) clearInterval(roleInterval)
+  clearInterval(typeTimer)
+  clearInterval(roleTimer)
 })
 </script>
 
@@ -38,14 +76,24 @@ onUnmounted(() => {
     />
     <div class="relative z-10 flex flex-col items-center w-full gap-3 lt-sm:gap-1.5">
       <p
-        class="text-[1.25rem] md:text-[4.5rem] lt-sm:text-[clamp(18px,6.6vw,30px)] tracking-[0.02em] lt-sm:tracking-[-0.015em] font-['JetBrains_Mono'] text-[var(--hero-strong)] whitespace-nowrap inline-block max-w-full my-4"
+        class="relative text-[1.25rem] md:text-[4.5rem] lt-sm:text-[clamp(18px,6.6vw,30px)] tracking-[0.02em] lt-sm:tracking-[-0.015em] font-['JetBrains_Mono'] text-[var(--hero-strong)] whitespace-nowrap inline-block max-w-full my-4"
       >
-        {{ ui.hero.greeting }}
+        <!-- 完整文字隱形佔位，打字期間版面不跳動；螢幕閱讀器讀這一份 -->
+        <span class="invisible">{{ ui.hero.greeting }}</span>
+        <span
+          class="absolute left-0 top-0"
+          aria-hidden="true"
+        >{{ greetingChars.slice(0, typedCount).join('') }}<span
+          v-if="!isTyped && !isLoading"
+          class="inline-block w-[0.08em] h-[0.9em] ml-[0.05em] align-text-bottom bg-current"
+        /></span>
       </p>
-      <p class="text-[1.125rem] md:text-[2rem] lt-sm:text-[clamp(18px,5vw,24px)] font-['JetBrains_Mono'] text-[var(--hero-soft)] my-2">
-        <Transition name="role-fade" mode="out-in">
-          <span :key="currentRoleIndex">{{ roles[currentRoleIndex] }}</span>
-        </Transition>
+      <p
+        class="text-[1.125rem] md:text-[2rem] lt-sm:text-[clamp(18px,5vw,24px)] font-['JetBrains_Mono'] text-[var(--hero-soft)] my-2 transition-opacity duration-500 motion-reduce:transition-none"
+        :class="isTyped ? 'opacity-100' : 'opacity-0'"
+      >
+        <span class="sr-only">{{ roles[currentRoleIndex] }}</span>
+        <span aria-hidden="true">{{ roleText }}</span>
         <span
           class="inline-block w-0.5 h-[1em] ml-1 align-text-bottom bg-current animate-[caret-blink_1s_steps(1)_infinite] motion-reduce:animate-none"
           aria-hidden="true"
@@ -62,22 +110,3 @@ onUnmounted(() => {
     </span>
   </section>
 </template>
-
-<style scoped>
-/* 彩蛋:職業輪播動畫 */
-.role-fade-enter-active,
-.role-fade-leave-active {
-  transition: all 0.5s ease;
-}
-
-.role-fade-enter-from {
-  opacity: 0;
-  transform: translateY(10px);
-}
-
-.role-fade-leave-to {
-  opacity: 0;
-  transform: translateY(-10px);
-}
-</style>
-

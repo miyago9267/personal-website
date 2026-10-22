@@ -101,17 +101,9 @@ const handleSkillClick = () => {
 </template>
 
 <style scoped>
-/* 卡片基礎樣式 */
+/* 卡片基礎樣式（transform/transition 由全域 .card-surface 統一處理） */
 .card-surface {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
   overflow: hidden;
-}
-
-/* 卡片 hover 效果 */
-.card-surface:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
 
 /* 卡片背景漸變效果 */
@@ -174,13 +166,6 @@ p {
 /* 技能標籤容器動畫 */
 .flex.flex-wrap {
   position: relative;
-}
-
-/* 響應式調整 */
-@media (max-width: 768px) {
-  .card-surface:hover {
-    transform: translateY(-2px);
-  }
 }
 
 /* 彩蛋：連擊計數器樣式 */

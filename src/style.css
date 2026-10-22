@@ -77,6 +77,13 @@ body {
 
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+/* 載入畫面期間鎖住捲動（滾輪、觸控、鍵盤） */
+html.scroll-locked,
+html.scroll-locked body {
+  overflow: hidden;
 }
 
 a {
@@ -96,7 +103,7 @@ h3 {
 
 .page-shell {
   position: relative;
-  overflow: hidden;
+  overflow: clip;
   animation: fade-in 0.6s var(--ease);
 }
 
@@ -109,69 +116,40 @@ h3 {
 }
 
 .page-content > section {
-  opacity: 0;
-  transform: translateY(32px) scale(0.98);
-  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
-  transition-delay: var(--reveal-delay, 0s);
   scroll-margin-top: 96px;
-  will-change: transform, opacity;
 }
 
-.page-content > section.is-visible {
-  opacity: 1;
-  transform: translateY(0) scale(1);
+/* 進場：標題各部分與卡片依序上浮；hover 動畫由 backwards fill 保留給 transform */
+:root {
+  --rise: 24px;
 }
 
-.is-loading .page-content > section {
-  opacity: 0;
-  transform: translateY(32px) scale(0.98);
-  transition: none;
+.reveal-item {
+  animation: rise-in 0.6s var(--ease) calc(var(--stagger, 0) * 80ms) backwards paused;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .page-content > section:not(.hero-section) {
-    transition: transform 0.25s var(--ease);
-  }
-
-  .page-content > section:not(.hero-section):hover {
-    transform: translateY(-3px) scale(1.004);
-  }
+.reveal-item.is-in {
+  animation-play-state: running;
 }
 
-.page-content > section:nth-of-type(1) {
-  --reveal-delay: 0.05s;
+.reveal-item.is-settled {
+  animation: none;
 }
 
-.page-content > section:nth-of-type(2) {
-  --reveal-delay: 0.1s;
-}
-
-.page-content > section:nth-of-type(3) {
-  --reveal-delay: 0.15s;
-}
-
-.page-content > section:nth-of-type(4) {
-  --reveal-delay: 0.2s;
-}
-
-.page-content > section:nth-of-type(5) {
-  --reveal-delay: 0.25s;
-}
-
-.page-content > section:nth-of-type(6) {
-  --reveal-delay: 0.3s;
-}
-
-.page-content > section:nth-of-type(7) {
-  --reveal-delay: 0.35s;
-}
-
-.page-content > section:nth-of-type(8) {
-  --reveal-delay: 0.4s;
+/* 載入畫面底下不播放，結束後才開始 */
+.is-loading .reveal-item {
+  animation-play-state: paused !important;
 }
 
 .motion-float {
   animation: float 10s ease-in-out infinite;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(var(--rise));
+  }
 }
 
 @keyframes fade-up {
@@ -228,10 +206,8 @@ h3 {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .page-content > section {
-    opacity: 1;
-    transform: none;
-    transition: none;
+  .reveal-item {
+    animation: none;
   }
 
   .motion-float {
@@ -290,14 +266,45 @@ a:focus-visible,
 }
 
 .card-surface {
-  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
-  transform: translateZ(0);
+  --spot: rgba(186, 142, 166, 0.22);
+  position: relative;
+  transform: perspective(900px) translateY(var(--lift, 0px)) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) scale(var(--zoom, 1));
+  transition: transform 0.3s var(--ease), box-shadow 0.2s var(--ease);
+}
+
+[data-theme='dark'] .card-surface {
+  --spot: rgba(236, 160, 196, 0.13);
+}
+
+/* 滑鼠跟隨聚光燈：畫在卡片背景之上、內容之下（負 z-index，卡片 transform 自成 stacking context） */
+.card-surface::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), var(--spot), transparent 65%);
+  opacity: 0;
+  transition: opacity 0.3s var(--ease);
+  pointer-events: none;
 }
 
 @media (hover: hover) and (pointer: fine) {
   .card-surface:hover {
-    transform: translateY(-2px) scale(1.003);
-    box-shadow: 0 12px 20px rgba(128, 82, 112, 0.16);
+    --lift: -4px;
+    --zoom: 1.01;
+    box-shadow: 0 18px 32px rgba(128, 82, 112, 0.24);
+  }
+
+  .card-surface:hover::after {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-surface {
+    transform: none;
+    transition: box-shadow 0.2s var(--ease);
   }
 }
 
@@ -314,21 +321,11 @@ button::-moz-focus-inner {
 @media (max-width: 640px) {
   :root {
     --hero-offset: -6vh;
+    --rise: 12px;
   }
 
   .page-content > section + section {
     margin-top: 16px;
-  }
-
-  .page-content > section {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-
-  .page-content > section.is-visible {
-    opacity: 1;
-    transform: none;
   }
 }
 

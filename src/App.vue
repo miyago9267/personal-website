@@ -4,6 +4,7 @@ import { ref } from 'vue'
 import { useLoading } from './composables/useLoading'
 import { useTheme } from './composables/useTheme'
 import { useSectionReveal } from './composables/useSectionReveal'
+import { useCardSpotlight } from './composables/useCardSpotlight'
 import { useKonamiCode } from './composables/useKonamiCode'
 import SiteHeader from './components/ui/SiteHeader.vue'
 import FloatingActions from './components/ui/FloatingActions.vue'
@@ -28,6 +29,7 @@ const mainRef = ref<HTMLElement | null>(null)
 useTheme()
 
 useSectionReveal(mainRef)
+useCardSpotlight()
 
 // 彩蛋: Konami Code
 const showKonamiMessage = ref(false)

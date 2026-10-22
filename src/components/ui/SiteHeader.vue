@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useUi } from '../../i18n'
-import { ref } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { useSite } from '../../composables/useSite'
 import { useDisclosure } from '../../composables/useDisclosure'
 import { useTheme } from '../../composables/useTheme'
@@ -27,6 +27,52 @@ const handleThemeToggle = () => {
   triggerThemeAnim(isDark.value ? 'sunrise' : 'sunset')
   toggleTheme()
 }
+
+// Scroll-spy：只追蹤 href 為 #id 的站內區塊（Blog 等外部連結略過）
+const inPageLinks = navLinks.filter((l) => l.href.startsWith('#'))
+const navRef = ref<HTMLElement | null>(null)
+const linkEls = new Map<string, HTMLElement>()
+const activeId = ref<string | null>(null)
+const indicator = ref({ left: 0, width: 0 })
+
+const setLinkEl = (id: string, el: unknown) => {
+  if (el) linkEls.set(id, el as HTMLElement)
+}
+
+const measureIndicator = () => {
+  const el = activeId.value ? linkEls.get(activeId.value) : null
+  if (el) indicator.value = { left: el.offsetLeft, width: el.offsetWidth }
+}
+
+let spy: IntersectionObserver | null = null
+let navResize: ResizeObserver | null = null
+
+onMounted(() => {
+  const inView = new Set<string>()
+  spy = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => (e.isIntersecting ? inView.add(e.target.id) : inView.delete(e.target.id)))
+      // 視窗中段橫帶內可能同時有兩個區塊，取 DOM 順序最後一個
+      activeId.value = [...inPageLinks].reverse().find((l) => inView.has(l.href.slice(1)))?.href.slice(1) ?? null
+      measureIndicator()
+    },
+    { rootMargin: '-35% 0px -50% 0px' }
+  )
+  inPageLinks.forEach((l) => {
+    const section = document.getElementById(l.href.slice(1))
+    if (section) spy?.observe(section)
+  })
+
+  if (navRef.value && typeof ResizeObserver !== 'undefined') {
+    navResize = new ResizeObserver(measureIndicator)
+    navResize.observe(navRef.value)
+  }
+})
+
+onBeforeUnmount(() => {
+  spy?.disconnect()
+  navResize?.disconnect()
+})
 </script>
 
 <template>
@@ -47,16 +93,27 @@ const handleThemeToggle = () => {
         <span class="text-[11px] tracking-[0.4em] uppercase text-[var(--muted)]">{{ ui.header.brandKicker }}</span>
         <span class="text-[16px] font-semibold text-[var(--text)]">{{ ui.header.brandTitle }}</span>
       </div>
-      <nav class="hidden lg:flex gap-5 text-[13px] text-[var(--muted)] overflow-x-auto pb-1 ml-auto">
+      <nav
+        ref="navRef"
+        class="relative hidden lg:flex gap-5 text-[13px] text-[var(--muted)] overflow-x-auto pb-1.5 ml-auto"
+      >
         <a
           v-for="item in navLinks"
           :key="item.href"
+          :ref="(el) => setLinkEl(item.href.slice(1), el)"
           :href="item.href"
           class="transition-colors hover:text-[var(--text)]"
+          :class="activeId && item.href === '#' + activeId ? 'text-[var(--text)]' : ''"
           @click="closeNav"
         >
           {{ ui.nav[item.id as keyof typeof ui.nav] }}
         </a>
+        <span
+          class="absolute bottom-0 left-0 h-0.5 rounded-[2px] bg-[linear-gradient(90deg,rgba(186,142,166,0.9),rgba(142,166,186,0.9))] pointer-events-none transition-[left,width,opacity] duration-[400ms] ease-[var(--ease)] motion-reduce:transition-none"
+          :class="activeId ? 'opacity-100' : 'opacity-0'"
+          :style="{ left: indicator.left + 'px', width: indicator.width + 'px' }"
+          aria-hidden="true"
+        />
       </nav>
       <div class="flex items-center gap-2 ml-auto lg:ml-3">
         <LocaleSwitcher />
