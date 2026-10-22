@@ -46,7 +46,7 @@
   "skills": {
     "kicker": "Skills",
     "title": "技术栈",
-    "subtitle": "从系统底层到用户界面，从算法到 AI 应用。",
+    "subtitle": "从系统底层到用户界面，从算法到 AI Agent 工作流。",
     "combo": "Combo",
     "comboMessages": {
       "c50": "究极技能树乱点人！",

@@ -57,6 +57,7 @@
         "Docker",
         "Kubernetes",
         "CI/CD",
+        "Git",
         "GCP",
         "Azure",
         "Nginx"
@@ -68,7 +69,9 @@
       "items": [
         "Go",
         "Python",
-        "Node.js"
+        "Node.js",
+        "Bun",
+        "Hono"
       ]
     },
     {
@@ -78,6 +81,7 @@
         "Vue 3",
         "Nuxt 4",
         "TypeScript",
+        "Vite",
         "UnoCSS"
       ]
     },
@@ -87,20 +91,23 @@
       "items": [
         "MySQL",
         "PostgreSQL",
-        "MongoDB",
-        "Git"
+        "MongoDB"
       ]
     },
     {
-      "category": "AI & ML",
-      "description": "人工智慧與機器學習",
+      "category": "AI Agent & LLM",
+      "description": "Agent 工作流、多代理協作與 LLM 應用",
       "items": [
-        "PyTorch",
+        "Google ADK",
+        "Claude Agent SDK",
+        "MCP",
+        "Agent Workflow",
+        "Multi-Agent Orchestration",
+        "Agent Skills",
+        "Context Engineering",
         "RAG",
-        "Prompt Engineering",
-        "Fine-tuning",
-        "OpenAI SDK",
-        "Openclaw"
+        "OpenClaw",
+        "PyTorch"
       ]
     },
     {

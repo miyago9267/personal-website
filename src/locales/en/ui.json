@@ -27,7 +27,7 @@
   },
   "skills": {
     "title": "Tech stack",
-    "subtitle": "From the system internals to the user interface, from algorithms to AI applications.",
+    "subtitle": "From the system internals to the user interface, from algorithms to AI agent workflows.",
     "comboMessages": {
       "c50": "Skill tree gone wild!",
       "c30": "Jack of all trades!",
